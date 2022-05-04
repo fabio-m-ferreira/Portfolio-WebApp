@@ -9,6 +9,8 @@ import Footer from './components/footer/Footer'
 
 AOS.init();
 
+window.addEventListener('load', AOS.refresh);
+
 const App = () => {
 
   return (
