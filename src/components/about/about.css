@@ -1,0 +1,112 @@
+.about-me {
+  padding: 0 2rem;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.about-card {
+  width: 50%;
+  background-color: var(--color-bg-variant);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.about-card:hover {
+  background-color: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.about-icon {
+  color: var(--color-white);
+  font-size: 1.4rem;
+}
+
+.cta {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  margin: 1rem 0;
+}
+
+.about-experience {
+  display: flex;
+  flex-flow: column;
+  white-space: nowrap;
+}
+
+.about-card h5 {
+  font-size: 0.95rem;
+}
+
+.about-card small {
+  font-size: 0.7rem;
+  color: var(--color-light);
+}
+
+.about-content p {
+  margin: 2rem 0 2rem;
+  color: var(--color-light);
+}
+
+/* ========== MEDIA QUERIES (Medium Devices) ========== */
+
+@media screen and (max-width: 1024px) {
+
+  .about-content p {
+    margin: 1rem 0 1.5rem;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cta {
+    justify-content: center;
+  }
+}
+
+/* ========== MEDIA QUERIES (Small Devices) ========== */
+
+@media screen and (max-width: 600px) {
+
+  .about-me {
+    padding: 0;
+  }
+
+  .about-cards {
+    width: 100%;
+  }
+
+  .about-content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .about-content p {
+    margin: 1.5rem 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  .about-card {
+    width: 100%;
+  }
+
+}
