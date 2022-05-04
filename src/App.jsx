@@ -7,9 +7,9 @@ import Portfolio from './components/portfolio/Portfolio'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 
-AOS.init();
 
-window.addEventListener('load', AOS.refresh);
+
+window.addEventListener('load', AOS.init());
 
 const App = () => {
 
