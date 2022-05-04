@@ -7,13 +7,9 @@ import Portfolio from './components/portfolio/Portfolio'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 
+window.addEventListener('load', function () { AOS.init(); });
 
 const App = () => {
-
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
 
   return (
     <>
