@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import AOS from 'aos'
 import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
@@ -8,10 +8,12 @@ import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 
 
-
-window.addEventListener('load', AOS.init());
-
 const App = () => {
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   return (
     <>
