@@ -109,4 +109,19 @@
 
 /* ========== MEDIA QUERIES (Small Devices) ========== */
 
-@media screen and (max-width: 600px) {}
+@media screen and (max-height: 760px) {
+
+    .project-header {
+        justify-content: flex-start;
+        padding-top: 2rem;
+    }
+
+}
+
+@media screen and (max-height: 570px) {
+
+    .project-header img {
+        display: none;
+    }
+
+}
