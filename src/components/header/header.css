@@ -103,3 +103,23 @@ header {
   }
 
 }
+
+/* ========== MEDIA QUERIES - Height (Small Devices) ========== */
+
+@media screen and (max-height: 440px) {
+
+  .mouse {
+    opacity: 1 !important;
+    transform: translateZ(0) !important;
+  }
+
+}
+
+@media screen and (max-height: 390px) {
+
+  header {
+    align-items: flex-start;
+    padding-top: 3rem;
+  }
+
+}

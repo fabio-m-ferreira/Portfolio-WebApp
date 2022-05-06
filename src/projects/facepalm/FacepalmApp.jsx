@@ -18,6 +18,8 @@ import IMG10 from '../../assets/facepalm-chat-messages.jpg'
 import { FaReact } from 'react-icons/fa'
 import { SiFirebase } from 'react-icons/si'
 
+window.addEventListener('load', function () { AOS.init(); });
+
 const data = [
 
   {
@@ -85,8 +87,6 @@ const data = [
 
 const FacepalmApp = () => {
 
-  AOS.init();
-
   return (
     <section id='projects'>
       <div className='project-header'>
@@ -98,13 +98,13 @@ const FacepalmApp = () => {
           <SiFirebase className='project-icon' data-aos="fade-up" data-aos-delay="350" />
         </div>
         <h3 data-aos="fade-up" data-aos-delay="400" className='text-light-alt'>Built for Android</h3>
-        <a data-aos="fade-up" data-aos-delay="500" href="https://github.com" className="btn" target="_blank" rel="noreferrer">GitHub</a>
+        <a data-aos="fade-up" data-aos-delay="550" href="https://github.com/voydd9/Facepalm" className="btn" target="_blank" rel="noreferrer">GitHub</a>
 
-        <div id="scroll-down-animation" data-aos="fade-up" data-aos-delay="600">
-          <span className='mouse' >
+        <div id="scroll-down-animation">
+          <span className='mouse' data-aos="fade-up" data-aos-delay="600">
             <span className='move'></span>
           </span>
-          <h5 className='scroll-down-text'>Scroll down</h5>
+          <h5 className='scroll-down-text' data-aos="fade-up" data-aos-delay="700">Scroll down</h5>
         </div>
       </div>
 
@@ -114,13 +114,13 @@ const FacepalmApp = () => {
           data.map(({ id, image, title, description }) => {
             return (
               <div key={id} className='project-item'>
-                <div className='project-description'>
+                <div className='project-description' data-aos="fade-up">
                   <div className='project-description-content'>
                     <h2>{title}</h2>
                     {description}
                   </div>
                 </div>
-                <div className='project-image'>
+                <div className='project-image' data-aos="fade-up">
                   <img src={image} alt={title} />
                 </div>
               </div>
