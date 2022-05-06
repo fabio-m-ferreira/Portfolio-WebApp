@@ -26,7 +26,7 @@ const data = [
     image: IMG3,
     title: 'Portfolio Template',
     sourceButton: <a href="https://github.com/voydd9/React-Portfolio-WebApp" className="btn" target="_blank" rel="noreferrer">GitHub</a>,
-    demoButton: <a href="https://ok5lp0.csb.app/" className="btn btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
+    demoButton: <a href="https://ff-react-portfolio-template.vercel.app/" className="btn btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
   },
   {
     id: 4,
