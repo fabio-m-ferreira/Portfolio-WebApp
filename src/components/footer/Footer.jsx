@@ -23,7 +23,7 @@ const Footer = () => {
 
       <div className="footer-copyright">
         <p>Website Developed by Fábio Ferreira.</p>
-        <a href="https://www.freepik.com/aleksandr-samochernyi"> Portfolio Section Websites mockups designed by aleksandr_samochernyi - Freepik</a>
+        <a href="https://www.freepik.com/aleksandr-samochernyi"> Portfolio Section mockups designed by aleksandr_samochernyi - Freepik</a>
       </div>
     </footer>
   )
