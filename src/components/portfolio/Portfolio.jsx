@@ -31,7 +31,7 @@ const data = [
   {
     id: 4,
     image: IMG4,
-    title: 'Maintaining tasks and tracking progress',
+    title: 'Travel Agency | Academic Project',
     sourceButton: <a href="https://github.com/voydd9/travel-agency" className="btn" target="_blank" rel="noreferrer">GitHub</a>,
     demoButton: <a href="projects/travel-agency/index.html" className="btn btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
   },
