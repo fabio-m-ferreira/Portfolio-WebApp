@@ -98,7 +98,7 @@ const FacepalmApp = () => {
           <SiFirebase className='project-icon' data-aos="fade-up" data-aos-delay="350" />
         </div>
         <h3 data-aos="fade-up" data-aos-delay="400" className='text-light-alt'>Built for Android</h3>
-        <a data-aos="fade-up" data-aos-delay="550" href="https://github.com/voydd9/Facepalm" className="btn" target="_blank" rel="noreferrer">GitHub</a>
+        <a data-aos="fade-up" data-aos-delay="550" href="https://github.com/fabio-m-ferreira/Facepalm" className="btn" target="_blank" rel="noreferrer">GitHub</a>
 
         <div id="scroll-down-animation">
           <span className='mouse' data-aos="fade-up" data-aos-delay="600">
