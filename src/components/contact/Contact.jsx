@@ -43,7 +43,7 @@ const Contact = () => {
           <article className='contact-option'>
             <BsGithub className='contact-option-icon' />
             <h4>GitHub</h4>
-            <a href="https://github.com/Voydd9" target="_blank" rel="noreferrer">See my Projects</a>
+            <a href="https://github.com/fabio-m-ferreira" target="_blank" rel="noreferrer">See my Projects</a>
           </article>
         </div>
 

@@ -18,12 +18,12 @@ const Footer = () => {
 
       <div className="footer-socials">
         <a href='https://www.linkedin.com/in/fabio--ferreira/' target="_blank" rel="noreferrer"><BsLinkedin /></a>
-        <a href='https://github.com/Voydd9' target="_blank" rel="noreferrer"><BsGithub /></a>
+        <a href='https://github.com/fabio-m-ferreira' target="_blank" rel="noreferrer"><BsGithub /></a>
       </div>
 
       <div className="footer-copyright">
         <p>Website Developed by Fábio Ferreira.</p>
-        <a href="https://www.freepik.com/aleksandr-samochernyi"> Portfolio Section mockups designed by aleksandr_samochernyi - Freepik</a>
+        <a href="https://www.freepik.com/aleksandr-samochernyi"> Portfolio Section Websites mockups designed by aleksandr_samochernyi - Freepik</a>
       </div>
     </footer>
   )
