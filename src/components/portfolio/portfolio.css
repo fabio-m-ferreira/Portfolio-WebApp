@@ -35,6 +35,9 @@
 }
 
 .portfolio-item-image {
+  position: relative;
+  aspect-ratio: 16 / 11;
+  width: 100%;
   border-radius: 1.5rem;
   overflow: hidden;
 }
@@ -79,17 +82,14 @@
     grid-template-columns: 1fr 1fr;
     gap: 1.2rem;
   }
-
 }
 
 /* ========== MEDIA QUERIES (Medium Devices) ========== */
 
 @media screen and (max-width: 1024px) {
-
   .portfolio-container .aos-wrapper:last-child {
     grid-column-end: unset;
   }
-
 }
 
 /* ========== MEDIA QUERIES (Small Devices) ========== */
