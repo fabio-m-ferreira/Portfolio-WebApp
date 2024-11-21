@@ -1,8 +1,8 @@
-.about-me {
+.aboutMe {
   padding: 0 2rem;
 }
 
-.about-cards {
+.cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.about-card {
+.card {
   width: 50%;
   background-color: var(--color-bg-variant);
   border: 1px solid transparent;
@@ -21,18 +21,18 @@
   transition: var(--transition);
 }
 
-.about-card:hover {
+.card:hover {
   background-color: transparent;
   border-color: var(--color-primary-variant);
   cursor: default;
 }
 
-.about-icon {
+.expIcon {
   color: var(--color-white);
   font-size: 1.4rem;
 }
 
-.cta {
+.buttonGroup {
   display: flex;
   gap: 1.2rem;
   flex-wrap: wrap;
@@ -40,22 +40,22 @@
   margin: 1rem 0;
 }
 
-.about-experience {
+.experience {
   display: flex;
   flex-flow: column;
   white-space: nowrap;
 }
 
-.about-card h5 {
+.card h5 {
   font-size: 0.95rem;
 }
 
-.about-card small {
+.card small {
   font-size: 0.7rem;
   color: var(--color-light);
 }
 
-.about-content p {
+.content p {
   margin: 2rem 0 2rem;
   color: var(--color-light);
 }
@@ -63,19 +63,18 @@
 /* ========== MEDIA QUERIES (Medium Devices) ========== */
 
 @media screen and (max-width: 1024px) {
-
-  .about-content p {
+  .content p {
     margin: 1rem 0 1.5rem;
   }
 
-  .about-cards {
+  .cards {
     grid-template-columns: 1fr;
     width: 80%;
     margin: 0 auto;
     text-align: center;
   }
 
-  .cta {
+  .buttonGroup {
     justify-content: center;
   }
 }
@@ -83,30 +82,27 @@
 /* ========== MEDIA QUERIES (Small Devices) ========== */
 
 @media screen and (max-width: 600px) {
-
-  .about-me {
+  .aboutMe {
     padding: 0;
   }
 
-  .about-cards {
+  .cards {
     width: 100%;
   }
 
-  .about-content {
+  .content {
     display: flex;
     flex-flow: column;
     align-items: center;
   }
 
-  .about-content p {
+  .content p {
     margin: 1.5rem 0;
   }
 }
 
 @media screen and (max-width: 360px) {
-
-  .about-card {
+  .card {
     width: 100%;
   }
-
 }

@@ -1,23 +1,23 @@
-header {
+.landingPage {
   height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 
-.header-container {
+.landingPageContainer {
   text-align: center;
 }
 
-.header-container h5 {
+.landingPageContainer h5 {
   font-size: 1rem;
 }
 
-.text-light-alt {
+.subTitle {
   color: var(--color-primary);
 }
 
-#scroll-down-animation {
+.scrollDown {
   position: absolute;
   bottom: 10%;
   left: 50%;
@@ -62,7 +62,6 @@ header {
   }
 }
 
-
 @keyframes mobile {
   0% {
     transform: translate(-50%, 2.4rem);
@@ -80,13 +79,10 @@ header {
   }
 }
 
-
-
 /* ========== MEDIA QUERIES (Medium Devices) ========== */
 
 @media screen and (max-width: 1024px) {
-
-  #scroll-down-animation {
+  #scrollDown {
     bottom: 15%;
   }
 
@@ -98,28 +94,23 @@ header {
     animation: mobile 2s linear infinite;
   }
 
-  .scroll-down-text {
+  .scrollDownText {
     display: none;
   }
-
 }
 
 /* ========== MEDIA QUERIES - Height (Small Devices) ========== */
 
 @media screen and (max-height: 440px) {
-
   .mouse {
     opacity: 1 !important;
     transform: translateZ(0) !important;
   }
-
 }
 
 @media screen and (max-height: 390px) {
-
-  header {
+  .landingPage {
     align-items: flex-start;
     padding-top: 3rem;
   }
-
 }

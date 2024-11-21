@@ -1,4 +1,4 @@
-footer {
+.footer {
   background-color: #171728;
   padding: 3rem 1rem;
   text-align: center;
@@ -6,15 +6,15 @@ footer {
   margin-top: 7rem;
 }
 
-footer a {
+.footer a {
   color: var(--color-white);
 }
 
-footer a:hover {
+.footer a:hover {
   color: #a9a9a9;
 }
 
-.footer-logo {
+.footerLogo {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 2rem;
@@ -29,14 +29,14 @@ footer a:hover {
   margin: 0 auto 2rem;
 }
 
-.footer-socials {
+.socials {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
-.footer-socials a {
+.socials a {
   background-color: var(--color-bg);
   color: var(--color-white);
   padding: 0.8rem;
@@ -45,17 +45,17 @@ footer a:hover {
   border: 1px solid transparent;
 }
 
-.footer-socials a:hover {
+.socials a:hover {
   background-color: transparent;
   border-color: var(--color-bg);
 }
 
-.footer-socials a svg {
+.socials a svg {
   height: 20px;
   width: 20px;
 }
 
-.footer-copyright {
+.copyright {
   display: flex;
   justify-content: center;
   align-items: center;

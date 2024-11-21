@@ -115,33 +115,6 @@ a:hover {
   color: var(--color-white);
 }
 
-.btn {
-  width: max-content;
-  display: inline-block;
-  color: var(--color-primary);
-  padding: 0.75rem 1.2rem;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  border: 1px solid var(--color-primary);
-  transition: var(--transition);
-}
-
-.btn:hover {
-  background-color: var(--color-white);
-  color: var(--color-bg);
-}
-
-.btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-bg);
-}
-
-.disabled-button {
-  border: 1px solid #777c81;
-  color: #777c81;
-  cursor: default;
-}
-
 img {
   display: block;
   width: 100%;
@@ -156,11 +129,13 @@ img {
   align-items: center;
 }
 
+/* ========== Remove ========== */
 .menu-invisible {
   bottom: -4rem;
   transition: all 0.5s;
 }
 
+/* ========== Remove ========== */
 .menu-visible {
   bottom: 0.5rem;
   transition: all 0.5s;

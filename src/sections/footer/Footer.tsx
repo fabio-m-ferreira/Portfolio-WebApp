@@ -1,17 +1,17 @@
 import React from "react";
 import Link from "next/link";
-import "./footer.css";
+import styles from "./footer.module.css";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer>
-      <a href="#home" className="footer-logo">
+    <footer className={styles.footer}>
+      <a href="#home" className={styles.footerLogo}>
         Fábio Ferreira
       </a>
 
-      <ul className="permalinks">
+      <ul className={styles.permalinks}>
         <li>
           <Link href="/#home">Home</Link>
         </li>
@@ -26,7 +26,7 @@ const Footer = () => {
         </li>
       </ul>
 
-      <div className="footer-socials">
+      <div className={styles.socials}>
         <a
           href="https://www.linkedin.com/in/fabio--ferreira/"
           target="_blank"
@@ -43,7 +43,7 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className="footer-copyright">
+      <div className={styles.copyright}>
         <p>Website Developed by Fábio Ferreira.</p>
         <a href="https://www.freepik.com/aleksandr-samochernyi">
           {" "}
