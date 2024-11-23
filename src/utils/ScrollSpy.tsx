@@ -1,184 +1,169 @@
-import * as React from "react";
-import {
-  MutableRefObject,
-  ReactNode,
+"use client";
+import React, {
   useEffect,
-  useRef,
   useState,
+  useRef,
+  ReactNode,
+  ElementType,
 } from "react";
 
-interface ScrollSpyProps {
+type ScrollspyProps = {
+  items: string[];
+  currentClassName: string;
+  scrolledPastClassName?: string;
+  style?: React.CSSProperties;
+  componentTag?: ElementType;
+  offset?: number;
+  rootEl?: string;
+  onUpdate?: (item?: HTMLElement) => void;
   children: ReactNode;
-  navContainerRef?: MutableRefObject<HTMLDivElement | null>;
-  parentScrollContainerRef?: MutableRefObject<HTMLDivElement | null>;
-  scrollThrottle?: number;
-  onUpdateCallback?: (id: string) => void;
-  offsetTop?: number;
-  offsetBottom?: number;
-  useDataAttribute?: string;
-  activeClass?: string;
-  useBoxMethod?: boolean;
-  updateHistoryStack?: boolean;
-}
+};
 
-const throttle = (callback: () => void, limit: number) => {
-  let tick = false;
+const throttle = (fn: () => void, threshold = 100) => {
+  let last: number | undefined;
+  let timer: NodeJS.Timeout | undefined;
 
   return () => {
-    if (!tick) {
-      callback();
-      tick = true;
-      setTimeout(function () {
-        tick = false;
-      }, limit);
+    const now = Date.now();
+    const timePassed = last !== undefined && now < last + threshold;
+
+    if (timePassed) {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        last = now;
+        fn();
+      }, threshold);
+    } else {
+      last = now;
+      fn();
     }
   };
 };
 
-const ScrollSpy = ({
+const Scrollspy: React.FC<ScrollspyProps> = ({
+  items,
+  currentClassName,
+  scrolledPastClassName,
+  style,
+  componentTag: ComponentTag = "ul",
+  offset = 0,
+  rootEl,
+  onUpdate = () => {},
   children,
-  navContainerRef,
-  parentScrollContainerRef,
-  scrollThrottle = 300,
-  onUpdateCallback,
-  offsetTop = 0,
-  offsetBottom = 0,
-  useDataAttribute = "to-scrollspy-id",
-  activeClass = "active-scroll-spy",
-  useBoxMethod = true,
-  updateHistoryStack = true,
-}: ScrollSpyProps) => {
-  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
-  const [navContainerItems, setNavContainerItems] = useState<NodeListOf<Element> | undefined>(); // prettier-ignore
+}) => {
+  const [targetItems, setTargetItems] = useState<HTMLElement[]>([]);
+  const [inViewState, setInViewState] = useState<boolean[]>([]);
+  const [isScrolledPast, setIsScrolledPast] = useState<boolean[]>([]);
+  const scrollHandler = useRef(() => {});
 
-  // keeps track of the Id in navcontainer which is active
-  const prevIdTracker = useRef("");
-
-  // To get the nav container items depending on whether the parent ref for the nav container is passed or not
-  useEffect(() => {
-    if (navContainerRef) {
-      setNavContainerItems(
-        navContainerRef.current?.querySelectorAll(`[data-${useDataAttribute}]`)
-      );
-    } else {
-      setNavContainerItems(
-        document.querySelectorAll(`[data-${useDataAttribute}]`)
-      );
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [navContainerRef]);
-
-  // fire once after nav container items are set
-  useEffect(() => {
-    checkAndUpdateActiveScrollSpy();
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [navContainerItems]);
-
-  const isVisible = (el: HTMLElement) => {
-    const rectInView = el.getBoundingClientRect();
-
-    if (useBoxMethod) {
-      const useHeight = parentScrollContainerRef?.current
-        ? parentScrollContainerRef?.current.offsetHeight
-        : window.innerHeight;
-      const hitbox_top = useHeight;
-      const element_top = rectInView.top;
-      const element_bottom = rectInView.top + useHeight;
-
-      return (
-        hitbox_top < element_bottom + offsetBottom &&
-        hitbox_top > element_top - offsetTop
-      );
-    } else {
-      // this decides how much of the element should be visible
-      const leniency = parentScrollContainerRef?.current
-        ? parentScrollContainerRef?.current.offsetHeight * 0.5
-        : window.innerHeight * 0.5;
-
-      const useHeight = parentScrollContainerRef?.current
-        ? parentScrollContainerRef?.current.offsetHeight
-        : window.innerHeight;
-
-      return (
-        rectInView.top + leniency + offsetTop >= 0 &&
-        rectInView.bottom - leniency - offsetBottom <= useHeight
-      );
-    }
+  const initSpyTarget = () => {
+    const targets = items
+      .map((id) => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[];
+    setTargetItems(targets);
+    return targets;
   };
 
-  const checkAndUpdateActiveScrollSpy = () => {
-    const scrollParentContainer = scrollContainerRef.current;
+  const getScrollDimension = () => {
+    const el = rootEl
+      ? document.querySelector(rootEl)
+      : document.documentElement;
+    const scrollTop = el?.scrollTop || 0;
+    const scrollHeight = el?.scrollHeight || 0;
+    return { scrollTop, scrollHeight };
+  };
 
-    // if there are no children, return
-    if (!(scrollParentContainer && navContainerItems)) return;
+  const isInView = (el: HTMLElement | null) => {
+    if (!el) return false;
 
-    // loop over all children in scroll container
-    for (let i = 0; i < scrollParentContainer.children.length; i++) {
-      // get child element
-      const useChild = scrollParentContainer.children.item(i) as HTMLDivElement;
+    const rootRect = rootEl
+      ? document.querySelector(rootEl)?.getBoundingClientRect()
+      : undefined;
+    const rect = el.getBoundingClientRect();
+    const winH = rootEl ? rootRect?.height || 0 : window.innerHeight;
+    const { scrollTop } = getScrollDimension();
 
-      const elementIsVisible = isVisible(useChild);
+    const elTop = rootEl
+      ? rect.top + scrollTop - (rootRect?.top || 0) + offset
+      : rect.top + scrollTop + offset;
+    const elBottom = elTop + el.offsetHeight;
 
-      // check if the element is in the viewport
-      if (elementIsVisible) {
-        // if so, get its ID
-        const changeHighlightedItemId = useChild.id;
+    return elTop < scrollTop + winH && elBottom > scrollTop;
+  };
 
-        // if the element was same as the one currently active ignore it
-        if (prevIdTracker.current === changeHighlightedItemId) return;
+  const getElemsViewState = () => {
+    const elemsInView: HTMLElement[] = [];
+    const elemsOutView: HTMLElement[] = [];
+    const viewStatusList: boolean[] = [];
+    let hasInView = false;
 
-        // now loop over each element in the nav Container
-        navContainerItems.forEach((el) => {
-          const attrId = el.getAttribute(`data-${useDataAttribute}`);
+    targetItems.forEach((item) => {
+      const isCurrentlyInView = hasInView ? false : isInView(item);
+      hasInView = hasInView || isCurrentlyInView;
+      viewStatusList.push(isCurrentlyInView);
 
-          // if the element contains 'active' the class remove it
-          if (el.classList.contains(activeClass)) {
-            el.classList.remove(activeClass);
-          }
-
-          // check if its ID matches the ID we got from the viewport
-          // also make sure it does not already contain the 'active' class
-          if (
-            attrId === changeHighlightedItemId &&
-            !el.classList.contains(activeClass)
-          ) {
-            el.classList.add(activeClass);
-
-            if (onUpdateCallback) {
-              onUpdateCallback(changeHighlightedItemId);
-            }
-
-            prevIdTracker.current = changeHighlightedItemId;
-            if (updateHistoryStack) {
-              window.history.replaceState(
-                {},
-                "",
-                `#${changeHighlightedItemId}`
-              );
-            }
-          }
-        });
-        break;
+      if (isCurrentlyInView) {
+        elemsInView.push(item);
+      } else {
+        elemsOutView.push(item);
       }
+    });
+
+    return {
+      inView: elemsInView,
+      outView: elemsOutView,
+      viewStatusList,
+      scrolledPast: scrolledPastClassName
+        ? viewStatusList.map(
+            (inView, i) => !inView && i < viewStatusList.indexOf(true)
+          )
+        : [],
+    };
+  };
+
+  const spy = () => {
+    const { viewStatusList, scrolledPast } = getElemsViewState();
+    if (JSON.stringify(viewStatusList) !== JSON.stringify(inViewState)) {
+      setInViewState(viewStatusList);
+      setIsScrolledPast(scrolledPast);
+      const activeItem = targetItems[viewStatusList.indexOf(true)];
+      onUpdate(activeItem);
     }
   };
 
-  useEffect(() => {
-    if (parentScrollContainerRef) {
-      parentScrollContainerRef.current?.addEventListener(
-        "scroll",
-        throttle(checkAndUpdateActiveScrollSpy, scrollThrottle)
-      );
-    } else {
-      window.addEventListener(
-        "scroll",
-        throttle(checkAndUpdateActiveScrollSpy, scrollThrottle)
-      );
-    }
-  });
+  const handleSpy = throttle(() => spy(), 100);
 
-  return <div ref={scrollContainerRef}>{children}</div>;
+  useEffect(() => {
+    setTargetItems(initSpyTarget());
+    scrollHandler.current = handleSpy;
+
+    const scrollEl = rootEl ? document.querySelector(rootEl) : window;
+    scrollEl?.addEventListener("scroll", scrollHandler.current);
+
+    return () => {
+      scrollEl?.removeEventListener("scroll", scrollHandler.current);
+    };
+  }, [items, rootEl]);
+
+  return (
+    <ComponentTag style={style}>
+      {React.Children.map(children, (child, idx) => {
+        if (React.isValidElement<{ className?: string }>(child)) {
+          const childClassName = [
+            child.props.className,
+            inViewState[idx] && currentClassName,
+            isScrolledPast[idx] && scrolledPastClassName,
+          ]
+            .filter(Boolean)
+            .join(" ");
+
+          return React.cloneElement(child, { className: childClassName });
+        }
+
+        return child;
+      })}
+    </ComponentTag>
+  );
 };
 
-export default ScrollSpy;
+export default Scrollspy;
