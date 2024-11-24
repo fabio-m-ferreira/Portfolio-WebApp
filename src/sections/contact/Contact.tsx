@@ -4,34 +4,9 @@ import styles from "./contact.module.css";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import Button from "@/components/button/Button";
-//import emailjs from "emailjs-com";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
-
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-
-  //   emailjs
-  //     .sendForm(
-  //       "service_b4403ka",
-  //       "template_ph0wd2h",
-  //       form.current,
-  //       "23DIf_2hTb5TfNtdB"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //         alert("Email was successfully sent!");
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //         alert("Failed to send!");
-  //       }
-  //     );
-
-  //   e.target.reset();
-  // };
 
   return (
     <section id="contact">

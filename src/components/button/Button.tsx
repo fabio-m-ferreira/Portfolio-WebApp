@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "./button.module.css";
 
-interface BaseButtonProps {
+interface BaseButtonProps extends React.HTMLAttributes<HTMLElement> {
   text: string;
   type?: "button" | "submit" | "reset";
   target?: string;
@@ -42,6 +42,7 @@ const Button = ({
   variant = "primary",
   className,
   fill,
+  ...rest
 }: ButtonProps) => {
   const buttonClasses = `${styles.btn} ${variant && styles[variant]} ${
     fill && styles.fill
@@ -57,6 +58,7 @@ const Button = ({
         rel={isDisabled ? undefined : "noreferrer"}
         aria-disabled={isDisabled}
         onClick={(e) => isDisabled && e.preventDefault()}
+        {...rest}
       >
         {text}
       </a>

@@ -5,7 +5,6 @@ import Button from "@components/button/Button";
 import Experience from "../experience/Experience";
 
 const About = () => {
-  console.log(styles);
   return (
     <section id="about">
       <h5 data-aos="fade-up">About Me</h5>
@@ -39,8 +38,9 @@ const About = () => {
               </p>
               <div className={styles.buttonGroup}>
                 <Button
-                  text="Download CV"
-                  href="/assets/Fabio_Ferreira_CV.pdf"
+                  text="Resume/CV"
+                  target="_blank"
+                  href="/assets/Fabio-Ferreira_CV.pdf"
                 />
                 <Button text="Let's Talk" variant="secondary" href="#contact" />
               </div>

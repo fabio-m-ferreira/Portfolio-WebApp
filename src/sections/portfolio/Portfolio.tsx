@@ -1,11 +1,10 @@
 import React from "react";
 import styles from "./portfolio.module.css";
 import Image from "next/image";
-import portfolioData from "./porfolioData";
-
-let aosDelayIndex = -1;
+import portfolioData from "@data/portfolioData";
 
 const Portfolio = () => {
+  let aosDelayIndex = -1;
   return (
     <section id="portfolio" className={styles.portfolio}>
       <h5>My Recent Work</h5>

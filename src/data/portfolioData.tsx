@@ -1,5 +1,5 @@
 import Button from "@/components/button/Button";
-import styles from "./portfolio.module.css";
+import styles from "@sections/portfolio/portfolio.module.css";
 
 interface dataProps {
   id: number;
@@ -44,7 +44,7 @@ const portfolioData: dataProps[] = [
       <Button
         className={styles.btn}
         text="See More"
-        href="/projects/facepalm"
+        href="/facepalm"
         target="_blank"
         variant="primary"
       />
@@ -58,7 +58,7 @@ const portfolioData: dataProps[] = [
       <Button
         className={styles.btn}
         text="GitHub"
-        href="https://github.com/fabio-m-ferreira/React-Portfolio-WebApp"
+        href="https://github.com/fabio-m-ferreira/React-Portfolio-Template"
         target="_blank"
         variant="secondary"
       />

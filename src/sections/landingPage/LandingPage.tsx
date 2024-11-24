@@ -13,14 +13,14 @@ const LandingPage = () => {
           Fullstack Developer
         </h5>
 
-        <div className={styles.scrollDown}>
-          <span className={styles.mouse} data-aos="fade-up">
-            <span className={styles.move}></span>
+        <div className="scroll-down-animation">
+          <span className="mouse" data-aos="fade-up">
+            <span className="move"></span>
           </span>
           <h5
             data-aos="fade-up"
             data-aos-delay="100"
-            className={styles.scrollDownText}
+            className="scroll-down-text"
           >
             Scroll down
           </h5>

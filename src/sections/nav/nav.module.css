@@ -9,7 +9,6 @@
   transform: translateX(-50%);
   border-radius: 3rem;
   backdrop-filter: blur(15px);
-  gap: 0.8rem;
 }
 
 .menu-visible {
