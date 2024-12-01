@@ -12,6 +12,7 @@
 
 :root {
   --color-bg: #1f1f38;
+  --color-bg-dark: #171728;
   --color-bg-variant: #2c2c6c;
   --color-primary: #4db5ff;
   --color-primary-variant: rgba(77, 181, 255, 0.4);
@@ -75,11 +76,15 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 h2 {
   font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
 }
 
 h5 {

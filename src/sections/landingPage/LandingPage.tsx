@@ -1,29 +1,67 @@
 import React from "react";
 import styles from "./landingPage.module.css";
+import { FaEnvelope, FaLocationDot } from "react-icons/fa6";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import Link from "next/link";
 
 const LandingPage = () => {
   return (
     <div id="home" className={styles.landingPage}>
       <div className={`container ${styles.landingPageContainer}`}>
-        <h5 data-aos="fade-up">Hello I&apos;m</h5>
-        <h1 data-aos="fade-up" data-aos-delay="100">
-          Fábio Ferreira
-        </h1>
-        <h5 data-aos="fade-up" data-aos-delay="200" className={styles.subTitle}>
-          Fullstack Developer
-        </h5>
+        <div className={styles.title}>
+          <h1 data-aos="fade-up">Fábio Ferreira</h1>
+          <h3
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className={styles.subTitle}
+          >
+            Frontend Developer
+          </h3>
+        </div>
+        <div className={styles.personalInfo}>
+          <div
+            className={styles.location}
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <FaLocationDot /> <h5>Santarém, Portugal</h5>
+          </div>
+
+          <div className={styles.socials}>
+            <Link
+              href="https://www.linkedin.com/in/fabio-m-ferreira/"
+              target="_blank"
+              rel="noreferrer"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <BsLinkedin />
+            </Link>
+            <Link
+              href="https://github.com/fabio-m-ferreira"
+              target="_blank"
+              rel="noreferrer"
+              data-aos="fade-up"
+              data-aos-delay="350"
+            >
+              <BsGithub />
+            </Link>
+
+            <a
+              data-aos="fade-up"
+              data-aos-delay="400"
+              href="mailto:me@fabio-ferreira.dev"
+              rel="noreferrer"
+            >
+              <FaEnvelope />
+            </a>
+          </div>
+        </div>
 
         <div className="scroll-down-animation">
           <span className="mouse" data-aos="fade-up">
             <span className="move"></span>
           </span>
-          <h5
-            data-aos="fade-up"
-            data-aos-delay="100"
-            className="scroll-down-text"
-          >
-            Scroll down
-          </h5>
         </div>
       </div>
     </div>
