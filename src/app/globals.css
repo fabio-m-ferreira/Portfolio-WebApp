@@ -135,16 +135,16 @@ img {
 }
 
 /* ========== Remove ========== */
-.menu-invisible {
+/* .menu-invisible {
   bottom: -4rem;
   transition: all 0.5s;
-}
+} */
 
 /* ========== Remove ========== */
-.menu-visible {
+/* .menu-visible {
   bottom: 0.5rem;
   transition: all 0.5s;
-}
+} */
 
 .scroll-down-animation {
   position: absolute;
@@ -269,6 +269,13 @@ img {
 /* ========== MEDIA QUERIES (Small Devices) ========== */
 
 @media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
   .container {
     width: var(--container-width-sm);
   }

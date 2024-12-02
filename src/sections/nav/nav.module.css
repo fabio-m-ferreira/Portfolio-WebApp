@@ -2,7 +2,7 @@
   background-color: rgba(0, 0, 0, 0.3);
   width: max-content;
   display: flex;
-  padding: 0.7rem 1.7rem;
+  padding: 0.5rem 0.6rem;
   z-index: 2;
   position: fixed;
   left: 50%;
@@ -11,12 +11,28 @@
   backdrop-filter: blur(15px);
 }
 
-.menu-visible {
+.scrollspy {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.navItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navItem svg {
+  z-index: 100;
+}
+
+.menuVisible {
   bottom: 0.5rem;
   transition: all 0.5s;
 }
 
-.menu-invisible {
+.menuInvisible {
   bottom: -4rem;
   transition: all 0.5s;
 }
@@ -24,7 +40,7 @@
 .nav a {
   background-color: transparent;
   padding: 0.7rem;
-  border-radius: 50%;
+  border-radius: 3rem;
   display: flex;
   color: var(--color-light);
   font-size: 1.1rem;
@@ -35,6 +51,6 @@
 }
 
 .nav .active {
-  background-color: var(--color-primary);
-  color: var(--color-bg);
+  background-color: var(--color-primary) !important;
+  color: var(--color-bg) !important;
 }

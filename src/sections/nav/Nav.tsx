@@ -7,7 +7,6 @@ import { BiBook, BiMessageSquareDetail } from "react-icons/bi";
 import Scrollspy from "@/utils/ScrollSpy";
 
 const Nav = () => {
-  const [activeNav, setActiveNav] = useState("#");
   const [isNavVisible, setIsNavVisible] = useState(false);
 
   // Handle scroll visibility using React logic
@@ -23,37 +22,42 @@ const Nav = () => {
   }, []);
 
   const navLinks = [
-    { href: "/#home", icon: <AiOutlineHome />, id: "home" },
-    { href: "/#about", icon: <AiOutlineUser />, id: "about" },
-    { href: "/#portfolio", icon: <BiBook />, id: "portfolio" },
-    { href: "/#contact", icon: <BiMessageSquareDetail />, id: "contact" },
+    { href: "/#home", icon: <AiOutlineHome />, id: "home", name: "Home" },
+    { href: "/#about", icon: <AiOutlineUser />, id: "about", name: "About" },
+    {
+      href: "/#portfolio",
+      icon: <BiBook />,
+      id: "portfolio",
+      name: "Portfolio",
+    },
+    {
+      href: "/#contact",
+      icon: <BiMessageSquareDetail />,
+      id: "contact",
+      name: "Contact",
+    },
   ];
 
   return (
     <nav
       id="menu"
       className={`${styles.nav} ${
-        isNavVisible ? "menu-visible" : "menu-invisible"
+        isNavVisible ? styles.menuVisible : styles.menuInvisible
       }`}
     >
       <Scrollspy
         items={navLinks.map((link) => link.id)}
         currentClassName={styles.active}
-        style={{ display: "flex", gap: "0.8rem" }}
+        className={styles.scrollspy}
         componentTag="div"
         offset={-100}
-        onUpdate={(currentItem) => {
-          if (currentItem) {
-            setActiveNav(currentItem.id);
-          }
-        }}
       >
-        {navLinks.map(({ href, icon, id }) => (
+        {navLinks.map(({ href, icon, id, name }) => (
           <Link
             key={id}
             href={href}
-            onClick={() => setActiveNav(id)}
-            className={activeNav === id ? styles.active : ""}
+            aria-label={name}
+            className={styles.navItem}
           >
             {icon}
           </Link>

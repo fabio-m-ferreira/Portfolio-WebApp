@@ -32,6 +32,7 @@ const LandingPage = () => {
               href="https://www.linkedin.com/in/fabio-m-ferreira/"
               target="_blank"
               rel="noreferrer"
+              aria-label="Linkedin"
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -41,6 +42,7 @@ const LandingPage = () => {
               href="https://github.com/fabio-m-ferreira"
               target="_blank"
               rel="noreferrer"
+              aria-label="Github"
               data-aos="fade-up"
               data-aos-delay="350"
             >
@@ -48,6 +50,7 @@ const LandingPage = () => {
             </Link>
 
             <a
+              aria-label="Email"
               data-aos="fade-up"
               data-aos-delay="400"
               href="mailto:me@fabio-ferreira.dev"

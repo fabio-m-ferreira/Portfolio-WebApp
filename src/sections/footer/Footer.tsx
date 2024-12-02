@@ -31,6 +31,7 @@ const Footer = () => {
           href="https://www.linkedin.com/in/fabio-m-ferreira/"
           target="_blank"
           rel="noreferrer"
+          aria-label="linkedin"
         >
           <BsLinkedin />
         </a>
@@ -38,6 +39,7 @@ const Footer = () => {
           href="https://github.com/fabio-m-ferreira"
           target="_blank"
           rel="noreferrer"
+          aria-label="github"
         >
           <BsGithub />
         </a>
