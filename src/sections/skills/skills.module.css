@@ -1,0 +1,40 @@
+.skillsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.iconWrapper {
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+}
+
+.tech {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-bg-variant);
+  border: 1px solid var(--color-primary-variant);
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+  transition: var(--transition);
+}
+
+.tech:hover {
+  background-color: #131321;
+  border-color: var(--color-primary-variant);
+}
+
+.tech h4 {
+  font-size: 1.1rem;
+}
+
+.tech p {
+  font-size: 0.8rem;
+  color: #b6b3b6;
+}
+
+.techIcons {
+  width: 2rem;
+  height: 2rem;
+}

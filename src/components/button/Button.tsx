@@ -6,21 +6,21 @@ interface BaseButtonProps extends React.HTMLAttributes<HTMLElement> {
   text: string;
   type?: "button" | "submit" | "reset";
   target?: string;
-  variant?: "primary" | "secondary" | "disabled";
+  variant?: "primary" | "secondary" | "tertiary" | "disabled";
   className?: string;
   fill?: boolean;
 }
 
 // Mutually exclusive types for `href` and `action`
 interface LinkButtonProps extends BaseButtonProps {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "tertiary";
   href: string;
   action?: never;
   type?: never;
 }
 
 interface ActionButtonProps extends BaseButtonProps {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "tertiary";
   action?: () => void;
   href?: never;
 }
@@ -57,6 +57,7 @@ const Button = ({
         target={isDisabled ? undefined : target}
         rel={isDisabled ? undefined : "noreferrer"}
         aria-disabled={isDisabled}
+        aria-label={text}
         onClick={(e) => isDisabled && e.preventDefault()}
         {...rest}
       >
@@ -72,6 +73,8 @@ const Button = ({
       className={buttonClasses}
       aria-disabled={isDisabled}
       disabled={isDisabled}
+      aria-label={text}
+      {...rest}
     >
       {text}
     </button>

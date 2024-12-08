@@ -46,12 +46,12 @@ const Footer = () => {
       </div>
 
       <div className={styles.copyright}>
-        <p>Website Developed by Fábio Ferreira.</p>
         <a href="https://www.freepik.com/aleksandr-samochernyi">
           {" "}
           Portfolio Section Websites mockups designed by aleksandr_samochernyi -
           Freepik
         </a>
+        <p>© 2024 | All rights reserved | Fábio Ferreira</p>
       </div>
     </footer>
   );
