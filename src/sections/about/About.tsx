@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./about.module.css";
-import { FaAward } from "react-icons/fa";
 import Button from "@components/button/Button";
-import Experience from "../experience/Experience";
+import { FaCode } from "react-icons/fa6";
+import { BsBriefcaseFill } from "react-icons/bs";
+import Skills from "@sections/skills/Skils";
 
 const About = () => {
   return (
@@ -13,14 +14,13 @@ const About = () => {
       <div className="container">
         <div className={styles.content}>
           <div className={styles.cards}>
-            <div className="aos-wrapper" data-aos="fade-up">
+            <div className={styles.aosWrapper} data-aos="fade-up">
               <div className={styles.card}>
-                <FaAward className={styles.expIcon} />
-                <h5>Experience</h5>
-                <div className={styles.experience}>
-                  <small>1 Year working</small>
-                  <small>3+ Years coding</small>
-                </div>
+                <BsBriefcaseFill />
+                <p>4+ years working</p>
+                <div className={styles.separator}></div>
+                <FaCode />
+                <p>6+ years coding</p>
               </div>
             </div>
 
@@ -30,26 +30,31 @@ const About = () => {
               data-aos-delay="100"
             >
               <p>
-                I&apos;m a Junior Full-stack Developer capable of developing
-                responsive websites in a complete way, both on the Front-end and
-                Back-end, with good design notions and always willing to learn
-                more. Plus a one year of professional experience with HTML/CSS
-                and Javascript.
+                I&apos;m a Fullstack Developer specializing in Frontend
+                development. Guided by a foundation in <span>design</span> and a
+                career in <span>cybersecurity</span>, I create web solutions
+                that prioritize both aesthetics and security.
               </p>
               <div className={styles.buttonGroup}>
                 <Button
-                  text="Resume/CV"
+                  text="Explore my Journey"
                   target="_blank"
                   href="/assets/Fabio-Ferreira_CV.pdf"
                 />
-                <Button text="Let's Talk" variant="secondary" href="#contact" />
+                <Button
+                  text="My Projects"
+                  variant="secondary"
+                  href="#contact"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <Experience />
+      <h5 className={styles.technicalSkills} data-aos="fade-up">
+        Technical Skills
+      </h5>
+      <Skills />
     </section>
   );
 };

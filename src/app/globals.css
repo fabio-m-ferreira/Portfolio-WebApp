@@ -9,13 +9,13 @@
   list-style: none;
   text-decoration: none;
 }
-
+/* #222643 */
 :root {
-  --color-bg: #1f1f38;
+  --color-bg: #1a1e37;
   --color-bg-dark: #171728;
-  --color-bg-variant: #2c2c6c;
+  --color-bg-variant: #1e2243;
   --color-primary: #4db5ff;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-primary-variant: #2f3563;
   --color-white: #fff;
   --color-light: rgba(255, 255, 255, 0.6);
 
@@ -35,7 +35,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-bg-variant);
+  background-color: var(--color-primary-variant);
   border-radius: 16px;
   border: 6px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;

@@ -1,9 +1,10 @@
-.aboutMe {
-  padding: 0 2rem;
+.content p {
+  margin: 2rem 0 2rem;
+  color: var(--color-light);
 }
 
 .cards {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   padding: 2rem 0rem;
@@ -11,14 +12,40 @@
   align-items: center;
 }
 
-.card {
+.aboutMe {
+  padding: 0rem;
   width: 50%;
+}
+
+.aboutMe span {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline var(--color-primary) 2px;
+}
+
+.aosWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: var(--color-bg-variant);
-  border: 1px solid transparent;
-  border-radius: 1rem;
+  border: 1px solid #2f3563;
+  border-radius: 0.5rem;
   padding: 2rem;
   text-align: center;
   transition: var(--transition);
+  min-width: 300px;
+}
+
+.card p {
+  margin: 0;
 }
 
 .card:hover {
@@ -40,24 +67,24 @@
   margin: 1rem 0;
 }
 
-.experience {
-  display: flex;
-  flex-flow: column;
-  white-space: nowrap;
-}
-
 .card h5 {
   font-size: 0.95rem;
 }
 
-.card small {
-  font-size: 0.7rem;
-  color: var(--color-light);
+.card svg {
+  font-size: 1.5rem;
+  color: var(--color-primary);
 }
 
-.content p {
-  margin: 2rem 0 2rem;
-  color: var(--color-light);
+.technicalSkills {
+  margin-bottom: 2rem;
+}
+
+.separator {
+  margin: 1rem 0;
+  height: 1px;
+  width: 80%;
+  background-color: var(--color-primary-variant);
 }
 
 /* ========== MEDIA QUERIES (Medium Devices) ========== */

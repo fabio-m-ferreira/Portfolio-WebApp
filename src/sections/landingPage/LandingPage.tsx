@@ -3,6 +3,7 @@ import styles from "./landingPage.module.css";
 import { FaEnvelope, FaLocationDot } from "react-icons/fa6";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
+import Button from "@/components/button/Button";
 
 const LandingPage = () => {
   return (
@@ -58,6 +59,14 @@ const LandingPage = () => {
             >
               <FaEnvelope />
             </a>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="400">
+            <Button
+              text="Download CV"
+              target="_blank"
+              variant="tertiary"
+              href="/assets/Fabio-Ferreira_CV.pdf"
+            />
           </div>
         </div>
 
