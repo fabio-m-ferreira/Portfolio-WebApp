@@ -17,7 +17,7 @@ const Skills = () => {
                 <div
                   className={styles.iconWrapper}
                   style={{
-                    backgroundColor: iconWrapColor,
+                    backgroundColor: `${iconWrapColor}40`,
                   }}
                 >
                   <Image
