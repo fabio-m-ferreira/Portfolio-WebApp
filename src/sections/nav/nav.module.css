@@ -1,5 +1,5 @@
 .nav {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--color-bg-dark);
   width: max-content;
   display: flex;
   padding: 0.5rem 0.6rem;
@@ -7,8 +7,8 @@
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 3rem;
-  backdrop-filter: blur(15px);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-primary-variant);
 }
 
 .scrollspy {
@@ -39,11 +39,11 @@
 
 .nav a {
   background-color: transparent;
-  padding: 0.7rem;
-  border-radius: 3rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
   display: flex;
   color: var(--color-light);
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 }
 
 .nav a:hover {

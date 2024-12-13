@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./nav.module.css";
 import Link from "next/link";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
-import { BiBook, BiMessageSquareDetail } from "react-icons/bi";
+import { BiBook } from "react-icons/bi";
 import Scrollspy from "@/utils/ScrollSpy";
 
 const Nav = () => {
@@ -25,16 +25,10 @@ const Nav = () => {
     { href: "/#home", icon: <AiOutlineHome />, id: "home", name: "Home" },
     { href: "/#about", icon: <AiOutlineUser />, id: "about", name: "About" },
     {
-      href: "/#portfolio",
+      href: "/#career",
       icon: <BiBook />,
-      id: "portfolio",
-      name: "Portfolio",
-    },
-    {
-      href: "/#contact",
-      icon: <BiMessageSquareDetail />,
-      id: "contact",
-      name: "Contact",
+      id: "career",
+      name: "Career",
     },
   ];
 
@@ -52,14 +46,14 @@ const Nav = () => {
         componentTag="div"
         offset={-100}
       >
-        {navLinks.map(({ href, icon, id, name }) => (
+        {navLinks.map(({ href, id, name }) => (
           <Link
             key={id}
             href={href}
             aria-label={name}
             className={styles.navItem}
           >
-            {icon}
+            {name}
           </Link>
         ))}
       </Scrollspy>

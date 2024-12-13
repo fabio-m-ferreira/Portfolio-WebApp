@@ -35,18 +35,14 @@ const About = () => {
             data-aos-delay="100"
           >
             <p>
-              I&apos;m a Fullstack Developer specializing in Frontend
-              development. Guided by a foundation in <span>design</span> and a
-              career in <span>cybersecurity</span>, I create web solutions that
-              prioritize both aesthetics and security.
+              I&apos;a Fullstack Developer with a focus on Frontend. Guided by a
+              foundation in <span>design</span> and a career in{" "}
+              <span>cybersecurity</span>, I create web solutions that prioritize
+              both aesthetics and resilience.
             </p>
             <div className={styles.buttonGroup}>
-              <Button
-                text="Explore my Journey"
-                target="_blank"
-                href="/assets/Fabio-Ferreira_CV.pdf"
-              />
-              <Button text="My Projects" variant="secondary" href="#contact" />
+              <Button text="Explore my Journey" href="/#career" />
+              {/* <Button text="My Projects" variant="secondary" href="#contact" /> */}
             </div>
           </div>
         </div>
