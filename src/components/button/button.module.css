@@ -1,14 +1,19 @@
 .btn {
-  padding: 0rem 1.2rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
+  padding: 0rem 1.2rem;
   border-radius: 0.4rem;
   cursor: pointer;
   border: 1px solid var(--color-primary);
   transition: var(--transition);
   text-align: center;
-  height: 42px;
+  height: 2.6rem;
+}
+
+.btn svg {
+  transition: var(--transition);
 }
 
 .btn:hover {
@@ -47,4 +52,14 @@
 
 .fill {
   flex: 1;
+}
+
+.small {
+  font-size: 0.7rem;
+  height: 1.6rem;
+  padding: 0rem 0.6rem;
+}
+
+.expandOpen {
+  transform: rotate(-180deg);
 }

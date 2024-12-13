@@ -11,22 +11,28 @@ const Skills = () => {
             <div
               key={title}
               data-aos="fade-up"
-              data-aos-delay={`${index * 50}`}
+              data-aos-delay={`${(index % 4) * 50}`}
+              className={styles.aosWrapper}
             >
               <div className={styles.tech}>
-                <div
-                  className={styles.iconWrapper}
-                  style={{
-                    backgroundColor: `${iconWrapColor}40`,
-                  }}
-                >
-                  <Image
-                    className={styles.techIcons}
-                    src={icon}
-                    alt="Typescript"
-                    width={300}
-                    height={300}
-                  />
+                <div className={styles.iconWrapper}>
+                  <div
+                    className={styles.iconContainer}
+                    style={{
+                      backgroundColor:
+                        title === "ExpressJS"
+                          ? "#ffffffe3"
+                          : `${iconWrapColor}40`,
+                    }}
+                  >
+                    <Image
+                      className={styles.icon}
+                      src={icon}
+                      alt={title}
+                      width={300}
+                      height={300}
+                    />
+                  </div>
                 </div>
                 <div className={styles.techName}>
                   <h4>{title}</h4>

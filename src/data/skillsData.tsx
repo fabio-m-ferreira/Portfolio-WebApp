@@ -29,7 +29,7 @@ const skillsData: dataProps[] = [
     icon: "/assets/tech/git.svg",
     title: "Git",
     subTitle: "Version control",
-    iconWrapColor: "#f03c2e",
+    iconWrapColor: "#f1502f",
   },
   {
     icon: "/assets/tech/figma.svg",

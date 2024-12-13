@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import styles from "./button.module.css";
+import { FaChevronDown } from "react-icons/fa6";
 
 interface BaseButtonProps extends React.HTMLAttributes<HTMLElement> {
   text: string;
@@ -9,6 +10,9 @@ interface BaseButtonProps extends React.HTMLAttributes<HTMLElement> {
   variant?: "primary" | "secondary" | "tertiary" | "disabled";
   className?: string;
   fill?: boolean;
+  size?: "small" | "medium";
+  expandIcon?: boolean;
+  expandOpen?: boolean;
 }
 
 // Mutually exclusive types for `href` and `action`
@@ -42,18 +46,21 @@ const Button = ({
   variant = "primary",
   className,
   fill,
+  size = "medium",
+  expandIcon,
+  expandOpen,
   ...rest
 }: ButtonProps) => {
-  const buttonClasses = `${styles.btn} ${variant && styles[variant]} ${
-    fill && styles.fill
-  } ${className && className}`;
+  const buttonClasses = `${styles.btn} ${styles[size]} ${
+    variant && styles[variant]
+  } ${fill && styles.fill} ${className && className}`;
   const isDisabled = variant === "disabled";
 
   if (href) {
     return (
       <a
         href={isDisabled ? undefined : href}
-        className={buttonClasses}
+        className={buttonClasses + size}
         target={isDisabled ? undefined : target}
         rel={isDisabled ? undefined : "noreferrer"}
         aria-disabled={isDisabled}
@@ -62,6 +69,9 @@ const Button = ({
         {...rest}
       >
         {text}
+        {expandIcon && (
+          <FaChevronDown className={expandOpen ? styles.expandOpen : ""} />
+        )}
       </a>
     );
   }
@@ -77,6 +87,9 @@ const Button = ({
       {...rest}
     >
       {text}
+      {expandIcon && (
+        <FaChevronDown className={expandOpen ? styles.expandOpen : ""} />
+      )}
     </button>
   );
 };

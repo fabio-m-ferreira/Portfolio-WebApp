@@ -1,11 +1,5 @@
-.content p {
-  margin: 2rem 0 2rem;
-  color: var(--color-light);
-}
-
-.cards {
+.aboutMeContainer {
   display: flex;
-  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   padding: 2rem 0rem;
   justify-items: center;
@@ -13,8 +7,16 @@
 }
 
 .aboutMe {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   padding: 0rem;
   width: 50%;
+}
+
+.aboutMe p {
+  font-size: 1rem;
+  color: var(--color-white);
 }
 
 .aboutMe span {
@@ -44,10 +46,6 @@
   min-width: 300px;
 }
 
-.card p {
-  margin: 0;
-}
-
 .card:hover {
   background-color: transparent;
   border-color: var(--color-primary-variant);
@@ -61,10 +59,9 @@
 
 .buttonGroup {
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
   flex-wrap: wrap;
   white-space: nowrap;
-  margin: 1rem 0;
 }
 
 .card h5 {
@@ -74,6 +71,11 @@
 .card svg {
   font-size: 1.5rem;
   color: var(--color-primary);
+}
+
+.card p {
+  font-size: 1rem;
+  color: var(--color-white);
 }
 
 .technicalSkills {
@@ -91,18 +93,42 @@
 
 @media screen and (max-width: 1024px) {
   .content p {
-    margin: 1rem 0 1.5rem;
+    margin: 1rem 0rem;
   }
 
-  .cards {
-    grid-template-columns: 1fr;
+  .aboutMeContainer {
     width: 80%;
+    flex-direction: column;
     margin: 0 auto;
     text-align: center;
   }
 
+  .aosWrapper {
+    width: 100%;
+  }
+
+  .card {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .card p {
+    margin: 0;
+  }
+
+  .aboutMe {
+    width: 100%;
+  }
+
   .buttonGroup {
     justify-content: center;
+  }
+
+  .separator {
+    margin: 0 1rem;
+    height: 80px;
+    width: 1px;
   }
 }
 
@@ -113,7 +139,7 @@
     padding: 0;
   }
 
-  .cards {
+  .aboutMeContainer {
     width: 100%;
   }
 
@@ -128,8 +154,16 @@
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 375px) {
   .card {
     width: 100%;
+    flex-direction: column;
+  }
+
+  .separator {
+    margin: 1rem 0;
+    height: 1px;
+    width: 80%;
+    background-color: var(--color-primary-variant);
   }
 }

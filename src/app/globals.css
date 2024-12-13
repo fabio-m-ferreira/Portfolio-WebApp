@@ -16,7 +16,7 @@
   --color-bg-variant: #1e2243;
   --color-primary: #4db5ff;
   --color-primary-variant: #2f3563;
-  --color-white: #fff;
+  --color-white: #efefef;
   --color-light: rgba(255, 255, 255, 0.6);
 
   --transition: all 0.5s ease;
@@ -87,8 +87,23 @@ h3 {
   font-size: 1.4rem;
 }
 
+h4 {
+  font-size: 1.1rem;
+}
+
 h5 {
   font-size: 1rem;
+}
+
+p {
+  font-size: 0.8rem;
+  color: var(--color-light);
+  text-align: justify;
+}
+
+main {
+  max-width: 80rem;
+  margin: 0 auto;
 }
 
 section {
@@ -122,7 +137,6 @@ a:hover {
 
 img {
   display: block;
-  width: 100%;
 }
 
 .aos-wrapper {
@@ -209,26 +223,6 @@ img {
 
 /* ========== MEDIA QUERIES (Medium Devices) ========== */
 
-@media screen and (max-width: 1400px) {
-  .container {
-    width: var(--container-width-md);
-  }
-
-  section {
-    margin-top: 6rem;
-  }
-}
-
-@media screen and (max-width: 1260px) {
-  .container {
-    width: var(--container-width-lg);
-  }
-
-  section {
-    margin-top: 6rem;
-  }
-}
-
 @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
@@ -274,9 +268,6 @@ img {
 
   h3 {
     font-size: 1.4rem;
-  }
-  .container {
-    width: var(--container-width-sm);
   }
 
   section {
