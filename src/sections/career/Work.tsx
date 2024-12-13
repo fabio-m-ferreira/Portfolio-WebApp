@@ -17,28 +17,23 @@ const Career = () => {
 
           <ul className={styles.bulletList}>
             <li className={styles.bulletPoint}>
-              Rebuilt and redesigned the main company website with the newest
-              technology available.
+              Lead developer for the company’s component library, ensuring
+              consistency and scalability across all projects.
             </li>
             <li className={styles.bulletPoint}>
-              Created a UI/UX-friendly editable website template for clients to
-              customize their own website.
+              Lead developer for a cloud management project that centralizes the
+              company’s services, integrating features like user management and
+              service management.
             </li>
             <li className={styles.bulletPoint}>
-              Redesigned a more UI/UX-friendly Backoffice.
+              Contributed significantly to redesigning and restructuring
+              projects to align with the new design guidelines and component
+              library, enabling better adoption across all platforms.
             </li>
             <li className={styles.bulletPoint}>
-              All of these practically and aesthetically changes massively
-              increased customer satisfaction.{" "}
-            </li>
-            <h5>As a Programmer Assistant:</h5>
-            <li className={styles.bulletPoint}>
-              Created a mobile version for POS devices so that our services
-              could be used in physical stores (Kotlin).
-            </li>
-            <li className={styles.bulletPoint}>
-              Helped developing an electronic signature feature to our services
-              (PHP, C++).{" "}
+              Contributed to diverse initiatives, including developing a Windows
+              application with Electron and building the company’s documentation
+              wiki for internal and public knowledge sharing.
             </li>
           </ul>
           <div className={styles.tech}></div>
@@ -53,11 +48,7 @@ const Career = () => {
       >
         <>
           <ul className={styles.bulletList}>
-            <li className={styles.bulletPoint}>
-              Designed and developed websites for local small businesses and
-              professional companies, tailoring solutions to meet diverse client
-              needs.
-            </li>
+            <li className={styles.bulletPoint}>Lead developer</li>
 
             <li className={styles.bulletPoint}>
               Redesigned existing websites to improve usability, aesthetics, and

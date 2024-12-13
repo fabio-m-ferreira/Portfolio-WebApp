@@ -174,6 +174,6 @@
 
 @media screen and (max-width: 474px) {
   .content.expanded .bulletList {
-    max-height: 35rem;
+    max-height: 50rem;
   }
 }
