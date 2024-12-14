@@ -3,6 +3,7 @@ import "./globals.css";
 import AOSInit from "@/utils/AOSInit";
 import Footer from "@/sections/footer/Footer";
 import Nav from "@/sections/nav/Nav";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Fábio | Portfolio",
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AOSInit />
+        <Analytics />
         <Nav />
         {children}
         <Footer />
