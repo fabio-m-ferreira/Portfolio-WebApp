@@ -2,7 +2,7 @@
   background-color: var(--color-bg-dark);
   width: max-content;
   display: flex;
-  padding: 0.5rem 0.6rem;
+  padding: 0.4rem;
   z-index: 2;
   position: fixed;
   left: 50%;

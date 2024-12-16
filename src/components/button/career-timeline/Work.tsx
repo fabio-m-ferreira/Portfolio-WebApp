@@ -1,16 +1,27 @@
 import React from "react";
-import styles from "./timelineItem.module.css";
-import TimelineItem from "./TimelineItem";
+import TimelineItem from "@components/button/career-timeline/TimelineItem";
+import { CareerWorkData } from "@/data/CareerData";
 
-const Career = () => {
+const Work = () => {
   return (
     <>
-      <TimelineItem
+      {CareerWorkData.map((item, index) => (
+        <TimelineItem key={index} {...item} />
+      ))}
+    </>
+  );
+};
+
+export default Work;
+
+{
+  /* <TimelineItem
         title="Fullstack developer | Security consultant"
         altTitle="Layer8"
         subtitle="Lisbon, Portugal"
         date="Aug 2022 - Present"
         horizontalLogo="/assets/career/layer8_logo.png"
+        techList={["Typescript", "React", "Next.js", "Node.js", "Python"]}
       >
         <>
           <h5>As a Front-End Developer:</h5>
@@ -35,8 +46,12 @@ const Career = () => {
               application with Electron and building the company’s documentation
               wiki for internal and public knowledge sharing.
             </li>
+            <li className={styles.bulletPoint}>
+              In a cybersecurity-focused organization, built solutions where
+              security wasn&apos;t just an afterthought, but a fundamental part
+              of how we create and design technology.
+            </li>
           </ul>
-          <div className={styles.tech}></div>
         </>
       </TimelineItem>
 
@@ -48,8 +63,6 @@ const Career = () => {
       >
         <>
           <ul className={styles.bulletList}>
-            <li className={styles.bulletPoint}>Lead developer</li>
-
             <li className={styles.bulletPoint}>
               Redesigned existing websites to improve usability, aesthetics, and
               performance, creating a stronger online presence for clients.
@@ -65,7 +78,6 @@ const Career = () => {
               every task.
             </li>
           </ul>
-          <div className={styles.tech}></div>
         </>
       </TimelineItem>
 
@@ -77,12 +89,10 @@ const Career = () => {
         horizontalLogo="/assets/career/gestix-white.png"
       >
         <>
-          <h5>As a Front-End Developer:</h5>
-
           <ul className={styles.bulletList}>
             <li className={styles.bulletPoint}>
-              Rebuilt and redesigned the main company website with the newest
-              technology available.
+              Rebuilt and redesigned the main company website with a focus on
+              performance, scalability and user experience.
             </li>
             <li className={styles.bulletPoint}>
               Created a UI/UX-friendly editable website template for clients to
@@ -95,7 +105,6 @@ const Career = () => {
               All of these practically and aesthetically changes massively
               increased customer satisfaction.{" "}
             </li>
-            <h5>As a Programmer Assistant:</h5>
             <li className={styles.bulletPoint}>
               Created a mobile version for POS devices so that our services
               could be used in physical stores (Kotlin).
@@ -105,11 +114,6 @@ const Career = () => {
               (PHP, C++).{" "}
             </li>
           </ul>
-          <div className={styles.tech}></div>
         </>
-      </TimelineItem>
-    </>
-  );
-};
-
-export default Career;
+      </TimelineItem> */
+}

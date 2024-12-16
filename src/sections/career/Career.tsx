@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./career.module.css";
-
-import Work from "./Work";
+import Work from "@components/button/career-timeline/Work";
 
 const Career = () => {
   const [activeTab, setActiveTab] = useState<"work" | "education">("work");

@@ -10,7 +10,12 @@ export interface TimelineItemProps {
   date: string;
   logo?: string;
   horizontalLogo?: string;
-  children: React.ReactNode;
+  bulletList?: string[];
+  techList?: {
+    name: string;
+    icon: React.ReactNode;
+  }[];
+  children?: React.ReactNode;
 }
 
 const TimelineItem = ({
@@ -20,6 +25,8 @@ const TimelineItem = ({
   date,
   logo,
   horizontalLogo,
+  bulletList,
+  techList,
   children,
 }: TimelineItemProps) => {
   const [expandOpen, setExpandOpen] = React.useState(false);
@@ -54,14 +61,46 @@ const TimelineItem = ({
         >
           {children}
 
+          {bulletList && (
+            <ul className={styles.bulletList}>
+              {bulletList.map((bullet, index) => (
+                <li key={index} className={styles.bulletPoint}>
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+          )}
+
           <Button
             onClick={() => setExpandOpen(!expandOpen)}
             size="small"
             expandIcon
             expandOpen={expandOpen}
             variant="secondary"
-            text="See more"
+            text={expandOpen ? "Show less" : "Show more"}
           />
+          {techList && (
+            <div className={styles.techList}>
+              {techList.map((tech, index) => (
+                <div key={index} className={styles.tech}>
+                  {tech.icon}
+                  <p>{tech.name}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* <div className={styles.techList}>
+            <div className={styles.tech}>
+              <FaHtml5 /> <p>Html</p>
+            </div>
+            <div className={styles.tech}>
+              <FaCss3Alt /> <p>CSS</p>
+            </div>
+            <div className={styles.tech}>
+              <FaJs /> <p>Javascript</p>
+            </div>
+          </div> */}
         </div>
       </div>
     </div>
