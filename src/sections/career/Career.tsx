@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import styles from "./career.module.css";
 import Work from "@components/button/career-timeline/Work";
+import Education from "@/components/button/career-timeline/Education";
 
 const Career = () => {
   const [activeTab, setActiveTab] = useState<"work" | "education">("work");
@@ -41,7 +42,7 @@ const Career = () => {
       <div data-aos="fade-up" className={`container ${styles.tabContent}`}>
         {activeTab === "work" && <Work />}
 
-        {activeTab === "education" && <></>}
+        {activeTab === "education" && <Education />}
       </div>
     </section>
   );

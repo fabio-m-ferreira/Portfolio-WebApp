@@ -1,30 +1,26 @@
 import React from "react";
 import styles from "./timelineItem.module.css";
-import Image from "next/image";
 import Button from "@/components/button/Button";
+import { FaLocationDot } from "react-icons/fa6";
 
 export interface TimelineItemProps {
   title: string;
-  altTitle: string;
-  subtitle: string;
+  subtitle?: string;
   date: string;
-  logo?: string;
-  horizontalLogo?: string;
+  location?: string;
   bulletList?: string[];
   techList?: {
     name: string;
-    icon: React.ReactNode;
+    icon?: React.ReactNode;
   }[];
   children?: React.ReactNode;
 }
 
 const TimelineItem = ({
   title,
-  altTitle,
   subtitle,
   date,
-  logo,
-  horizontalLogo,
+  location,
   bulletList,
   techList,
   children,
@@ -43,17 +39,12 @@ const TimelineItem = ({
           <div className={styles.title}>
             <h4>{title}</h4>
             <p>{subtitle}</p>
+            {location && (
+              <p className={styles.location}>
+                <FaLocationDot /> {location}
+              </p>
+            )}
           </div>
-          {logo && <Image src={logo} alt={altTitle} width={100} height={100} />}
-          {horizontalLogo && (
-            <Image
-              src={horizontalLogo}
-              alt={altTitle}
-              width={100}
-              height={50}
-              className={styles.horizontalLogo}
-            />
-          )}
         </div>
 
         <div
@@ -89,18 +80,6 @@ const TimelineItem = ({
               ))}
             </div>
           )}
-
-          {/* <div className={styles.techList}>
-            <div className={styles.tech}>
-              <FaHtml5 /> <p>Html</p>
-            </div>
-            <div className={styles.tech}>
-              <FaCss3Alt /> <p>CSS</p>
-            </div>
-            <div className={styles.tech}>
-              <FaJs /> <p>Javascript</p>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

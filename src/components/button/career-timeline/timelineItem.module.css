@@ -63,26 +63,32 @@
 }
 
 .header img {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   object-fit: contain;
 }
 
 .header .horizontalLogo {
   height: 1.5rem;
+  width: 4rem;
 }
 
 .title {
   margin-bottom: 1rem;
 }
 
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 .content {
-  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
 }
 
 .content h5 {
@@ -136,6 +142,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .tech {

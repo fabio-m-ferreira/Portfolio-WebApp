@@ -1,15 +1,15 @@
 import React from "react";
 import TimelineItem from "@components/button/career-timeline/TimelineItem";
-import { CareerWorkData } from "@/data/CareerData";
+import { CareerEducationData } from "@/data/CareerData";
 
-const Work = () => {
+const Education = () => {
   return (
     <>
-      {CareerWorkData.map((item, index) => (
+      {CareerEducationData.map((item, index) => (
         <TimelineItem key={index} {...item} />
       ))}
     </>
   );
 };
 
-export default Work;
+export default Education;

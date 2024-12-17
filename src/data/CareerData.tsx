@@ -30,10 +30,9 @@ import { RiNextjsFill } from "react-icons/ri";
 export const CareerWorkData: TimelineItemProps[] = [
   {
     title: "Fullstack developer | Security consultant",
-    altTitle: "Layer8",
-    subtitle: "Lisbon, Portugal",
+    subtitle: "Layer8",
+    location: "Lisbon, Portugal | Hybrid",
     date: "Aug 2022 - Present",
-    horizontalLogo: "/assets/career/layer8_logo.png",
     bulletList: [
       "Lead developer for the company's component library, ensuring consistency and scalability across all projects.",
       "Lead developer for a cloud management project that centralizes the company's services, integrating features like user management and service management.",
@@ -58,8 +57,7 @@ export const CareerWorkData: TimelineItemProps[] = [
   },
   {
     title: "Freelancer",
-    altTitle: "Gestix",
-    subtitle: "Santarém, Portugal",
+    location: "Remote",
     date: "Dez 2021 - Present",
     bulletList: [
       "Redesigned existing websites to improve usability, aesthetics, and performance, creating a stronger online presence for clients.",
@@ -84,10 +82,9 @@ export const CareerWorkData: TimelineItemProps[] = [
   },
   {
     title: "Frontend developer | Progammer assistant",
-    altTitle: "Gestix",
-    subtitle: "Santarém, Portugal",
+    subtitle: "Gestix",
+    location: "Santarém, Portugal | Hybrid",
     date: "Jan 2021 - Nov 2021",
-    horizontalLogo: "/assets/career/gestix-white.png",
     bulletList: [
       "Rebuilt and redesigned the main company website with a focus on performance, scalability and user experience.",
       "Created a UI/UX-friendly editable website template for clients to customize their own website.",
@@ -104,6 +101,67 @@ export const CareerWorkData: TimelineItemProps[] = [
       { name: "PHP", icon: <FaPhp /> },
       { name: "C++", icon: <SiCplusplus /> },
       { name: "Indesign", icon: <SiAdobeindesign /> },
+    ],
+  },
+];
+
+export const CareerEducationData: TimelineItemProps[] = [
+  {
+    title: "Google UX Design Professional Certificate",
+    subtitle: "Corsera",
+    date: "Jun 2023 - Dez 2023",
+    bulletList: [
+      "Mastered user-centered design principles, including user research, wireframing, prototyping, and usability testing.",
+      "Learned to create responsive and accessible designs for web and mobile platforms, focusing on inclusivity and usability.",
+      "Gained hands-on experience with industry-standard tools like Figma for wireframing and prototyping.",
+      "Applied design thinking methodologies to solve real-world challenges through research, ideation, and iterative testing.",
+      "Developed expertise in conducting usability studies, analyzing feedback, and refining designs to enhance user satisfaction.",
+    ],
+    techList: [
+      { name: "Figma", icon: <SiFigma /> },
+      { name: "UX/UI Design" },
+      { name: "WireFraming" },
+      { name: "Prototyping" },
+      { name: "User Research" },
+      { name: "Usability Testing" },
+    ],
+  },
+  {
+    title: "Web development",
+    subtitle: "ETIC Escola de Tecnologias Inovação e Criação",
+    location: "Lisbon, Portugal",
+    date: "Out 2019 - Jun 2020",
+    bulletList: [
+      "Learned the fundamentals of front-end development, including HTML, CSS, and JavaScript to create responsive and interactive web pages.",
+      "Gained hands-on experience building dynamic user interfaces using React, focusing on component-based architecture.",
+      "Developed back-end functionality with PHP, enabling server-side scripting and database integration.",
+      "Built and deployed beginner to intermediate-level projects, applying modern web development practices to solve real-world challenges.",
+    ],
+    techList: [
+      { name: "HTML", icon: <FaHtml5 /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
+      { name: "Javascript", icon: <FaJs /> },
+      { name: "React", icon: <FaReact /> },
+      { name: "PHP", icon: <FaPhp /> },
+    ],
+  },
+  {
+    title: "Multimedia Designer",
+    subtitle: "High School",
+    location: "Salvaterra de Magos, Portugal",
+    date: "Out 2019 - Jun 2020",
+    bulletList: [
+      "Explored a range of multimedia disciplines, including graphic design, photography, and video/photo editing, developing a strong foundation in creative design principles.",
+      "Applied design and programming concepts to create simple websites and basic game prototypes, integrating creativity with technical skills.",
+      "Learned to combine creativity and technology to produce engaging content across various platforms, including print, web, and video.",
+    ],
+    techList: [
+      { name: "HTML", icon: <FaHtml5 /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
+      { name: "Javascript", icon: <FaJs /> },
+      { name: "Photoshop", icon: <SiAdobephotoshop /> },
+      { name: "Illustrator", icon: <SiAdobeillustrator /> },
+      { name: "After Effects", icon: <SiAdobeaftereffects /> },
     ],
   },
 ];
