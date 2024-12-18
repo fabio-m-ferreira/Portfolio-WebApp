@@ -80,7 +80,7 @@
     grid-template-columns: 1fr;
   }
 
-  .aosWrapper {
+  .aosWrapper:nth-child(1n + 1) {
     transition-delay: 0ms !important;
   }
 }
