@@ -4,16 +4,20 @@ import { FaEnvelope, FaLocationDot } from "react-icons/fa6";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
 import Button from "@/components/button/Button";
+import Logo from "./Logo";
 
 const LandingPage = () => {
   return (
     <div id="home" className={styles.landingPage}>
       <div className={`container ${styles.landingPageContainer}`}>
+        <Logo />
         <div className={styles.title}>
-          <h1 data-aos="fade-up">Fábio Ferreira</h1>
+          <h1 data-aos="fade-up" data-aos-delay="2000">
+            Fábio Ferreira
+          </h1>
           <h3
             data-aos="fade-up"
-            data-aos-delay="100"
+            data-aos-delay="2100"
             className={styles.subTitle}
           >
             Frontend Developer
@@ -23,7 +27,7 @@ const LandingPage = () => {
           <div
             className={styles.location}
             data-aos="fade-up"
-            data-aos-delay="200"
+            data-aos-delay="2200"
           >
             <FaLocationDot /> <h5>Santarém, Portugal</h5>
           </div>
@@ -35,7 +39,7 @@ const LandingPage = () => {
               rel="noreferrer"
               aria-label="Linkedin"
               data-aos="fade-up"
-              data-aos-delay="300"
+              data-aos-delay="2300"
             >
               <BsLinkedin />
             </Link>
@@ -45,7 +49,7 @@ const LandingPage = () => {
               rel="noreferrer"
               aria-label="Github"
               data-aos="fade-up"
-              data-aos-delay="350"
+              data-aos-delay="2350"
             >
               <BsGithub />
             </Link>
@@ -53,14 +57,14 @@ const LandingPage = () => {
             <a
               aria-label="Email"
               data-aos="fade-up"
-              data-aos-delay="400"
+              data-aos-delay="2400"
               href="mailto:me@fabio-ferreira.dev"
               rel="noreferrer"
             >
               <FaEnvelope />
             </a>
           </div>
-          <div data-aos="fade-up" data-aos-delay="400">
+          <div data-aos="fade-up" data-aos-delay="2400">
             <Button
               text="Download CV"
               target="_blank"
