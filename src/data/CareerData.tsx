@@ -1,4 +1,4 @@
-import { TimelineItemProps } from "@components/button/career-timeline/TimelineItem";
+import { TimelineItemProps } from "@components/career-timeline/TimelineItem";
 import {
   FaCss3Alt,
   FaGitAlt,
@@ -19,11 +19,11 @@ import {
   SiWordpress,
   SiTypescript,
   SiGitlab,
-  SiElectron,
   SiDocker,
   SiVitest,
   SiExpress,
   SiCodeium,
+  SiKeycloak,
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 
@@ -52,7 +52,7 @@ export const CareerWorkData: TimelineItemProps[] = [
       { name: "NodeJS", icon: <FaNodeJs /> },
       { name: "ExpressJS", icon: <SiExpress /> },
       { name: "Codeium", icon: <SiCodeium /> },
-      { name: "Electron", icon: <SiElectron /> },
+      { name: "Keycloak", icon: <SiKeycloak /> },
     ],
   },
   {

@@ -1,5 +1,5 @@
 import React from "react";
-import TimelineItem from "@components/button/career-timeline/TimelineItem";
+import TimelineItem from "@components/career-timeline/TimelineItem";
 import { CareerEducationData } from "@/data/CareerData";
 
 const Education = () => {

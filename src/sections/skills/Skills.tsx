@@ -6,7 +6,7 @@ const Skills = () => {
   return (
     <section id="skills" className="container">
       <div className={styles.skillsContainer}>
-        {skillsData.map(({ icon, title, subTitle, iconWrapColor }, index) => {
+        {skillsData.map(({ icon, title, subTitle }, index) => {
           return (
             <div
               key={title}
@@ -15,25 +15,14 @@ const Skills = () => {
               className={styles.aosWrapper}
             >
               <div className={styles.tech}>
-                <div className={styles.iconWrapper}>
-                  <div
-                    className={styles.iconContainer}
-                    style={{
-                      backgroundColor:
-                        title === "ExpressJS"
-                          ? "#ffffffe3"
-                          : `${iconWrapColor}40`,
-                    }}
-                  >
-                    <Image
-                      className={styles.icon}
-                      src={icon}
-                      alt={title}
-                      width={300}
-                      height={300}
-                    />
-                  </div>
-                </div>
+                <Image
+                  className={styles.icon}
+                  src={icon}
+                  alt={title}
+                  width={300}
+                  height={300}
+                />
+
                 <div className={styles.techName}>
                   <h4>{title}</h4>
                   <p>{subTitle}</p>

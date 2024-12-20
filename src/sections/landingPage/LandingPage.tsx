@@ -58,7 +58,7 @@ const LandingPage = () => {
               aria-label="Email"
               data-aos="fade-up"
               data-aos-delay="2400"
-              href="mailto:me@fabio-ferreira.dev"
+              href="mailto:fabio.f.dev@gmail.com"
               rel="noreferrer"
             >
               <FaEnvelope />
@@ -75,7 +75,7 @@ const LandingPage = () => {
         </div>
 
         <div className="scroll-down-animation">
-          <span className="mouse" data-aos="fade-up">
+          <span className="mouse" data-aos="fade-up" data-aos-delay="2450">
             <span className="move"></span>
           </span>
         </div>

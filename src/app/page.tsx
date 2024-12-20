@@ -2,7 +2,7 @@
 import React from "react";
 import LandingPage from "@/sections/landingPage/LandingPage";
 import About from "@sections/about/About";
-// import Portfolio from "@sections/portfolio/Portfolio";
+import Portfolio from "@sections/portfolio/Portfolio";
 import Career from "@/sections/career/Career";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <LandingPage />
       <About />
       <Career />
-      {/* <Portfolio /> */}
+      <Portfolio />
     </main>
   );
 }

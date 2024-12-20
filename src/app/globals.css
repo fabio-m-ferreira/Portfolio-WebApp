@@ -62,7 +62,6 @@ body {
 /* ========== GENERAL STYLES ========== */
 
 .container {
-  width: var(--container-width-lg);
   margin: 0 auto;
 }
 
@@ -102,7 +101,7 @@ p {
 }
 
 main {
-  max-width: 80rem;
+  max-width: 60rem;
   margin: 0 auto;
 }
 

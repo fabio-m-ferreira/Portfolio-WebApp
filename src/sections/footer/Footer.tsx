@@ -43,7 +43,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.copyright}>
-        <a href="https://www.freepik.com/aleksandr-samochernyi">
+        <a href="https://www.freepik.com/aleksandr-samochernyi" target="_blank">
           {" "}
           Portfolio Section Websites mockups designed by aleksandr_samochernyi -
           Freepik

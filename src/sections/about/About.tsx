@@ -3,7 +3,7 @@ import styles from "./about.module.css";
 import Button from "@components/button/Button";
 import { FaCode } from "react-icons/fa6";
 import { BsBriefcaseFill } from "react-icons/bs";
-import Skills from "@sections/skills/Skils";
+import Skills from "@sections/skills/Skills";
 
 const About = () => {
   return (
@@ -35,14 +35,18 @@ const About = () => {
             data-aos-delay="100"
           >
             <p>
-              I&apos;m a Fullstack Developer with a focus on Frontend. Guided by
-              a foundation in <span>design</span> and a career in{" "}
-              <span>cybersecurity</span>, I create web solutions that prioritize
-              both aesthetics and resilience.
+              I&apos;m a <span>Fullstack Developer</span> with a focus on
+              Frontend. Guided by a foundation in <span>design</span> and a
+              career in <span>cybersecurity</span>, I create web solutions that
+              prioritize both aesthetics and resilience.
             </p>
             <div className={styles.buttonGroup}>
               <Button text="Explore my Journey" href="/#career" />
-              {/* <Button text="My Projects" variant="secondary" href="#contact" /> */}
+              <Button
+                text="Let's Talk"
+                variant="tertiary"
+                href="mailto:fabio.f.dev@gmail.com"
+              />
             </div>
           </div>
         </div>
