@@ -1,18 +1,18 @@
 import React from "react";
-import styles from "./portfolio.module.css";
+import styles from "./projects.module.css";
 import Image from "next/image";
-import portfolioData from "@data/portfolioData";
+import projectsData from "@data/projectsData";
 
-const Portfolio = () => {
+const Projects = () => {
   return (
-    <section id="portfolio">
+    <section id="projects">
       <h5 data-aos="fade-up">My Recent Work</h5>
       <h2 data-aos="fade-up" data-aos-delay="50">
         My Projects
       </h2>
 
-      <div className={[styles.portfolioContainer, "container"].join(" ")}>
-        {portfolioData.map(
+      <div className={[styles.projectsContainer, "container"].join(" ")}>
+        {projectsData.map(
           (
             { id, image, title, subtitle, techStack, sourceButton, demoButton },
             index
@@ -21,7 +21,7 @@ const Portfolio = () => {
               data-aos="fade-up"
               data-aos-delay={`${(index % 2) * 50}`}
               key={id}
-              className={styles.portfolioItem}
+              className={styles.projectsItem}
             >
               <div className={styles.projectImage}>
                 <Image
@@ -64,4 +64,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projects;

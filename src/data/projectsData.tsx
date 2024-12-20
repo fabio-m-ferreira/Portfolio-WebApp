@@ -1,5 +1,5 @@
 import Button from "@/components/button/Button";
-import styles from "@sections/portfolio/portfolio.module.css";
+import styles from "@sections/projects/projects.module.css";
 import React from "react";
 import {
   FaCss3Alt,
@@ -23,7 +23,7 @@ interface dataProps {
   demoButton: React.ReactNode;
 }
 
-const portfolioData: dataProps[] = [
+const projectsData: dataProps[] = [
   {
     id: 1,
     image: "/assets/portfolio-template.jpg",
@@ -167,4 +167,4 @@ const portfolioData: dataProps[] = [
   },
 ];
 
-export default portfolioData;
+export default projectsData;

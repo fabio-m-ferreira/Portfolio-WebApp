@@ -30,6 +30,12 @@ const Nav = () => {
       id: "career",
       name: "Career",
     },
+    {
+      href: "/#projects",
+      icon: <BiBook />,
+      id: "projects",
+      name: "Projects",
+    },
   ];
 
   return (

@@ -1,10 +1,10 @@
-.portfolioContainer {
+.projectsContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-.portfolioItem {
+.projectsItem {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--color-primary-variant);
@@ -90,7 +90,7 @@
 }
 
 @media screen and (max-width: 660px) {
-  .portfolioContainer {
+  .projectsContainer {
     grid-template-columns: 1fr;
   }
 }
