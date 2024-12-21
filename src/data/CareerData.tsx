@@ -24,6 +24,8 @@ import {
   SiExpress,
   SiCodeium,
   SiKeycloak,
+  SiStorybook,
+  SiMui,
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 
@@ -53,6 +55,8 @@ export const CareerWorkData: TimelineItemProps[] = [
       { name: "ExpressJS", icon: <SiExpress /> },
       { name: "Codeium", icon: <SiCodeium /> },
       { name: "Keycloak", icon: <SiKeycloak /> },
+      { name: "Storybook", icon: <SiStorybook /> },
+      { name: "Material UI", icon: <SiMui /> },
     ],
   },
   {

@@ -26,7 +26,7 @@ interface dataProps {
 const projectsData: dataProps[] = [
   {
     id: 1,
-    image: "/assets/portfolio-template.jpg",
+    image: "/assets/rm_website.jpg",
     title: "Resultado de Mestre",
     subtitle: "Professional Project",
     techStack: [
@@ -64,7 +64,7 @@ const projectsData: dataProps[] = [
   },
   {
     id: 2,
-    image: "/assets/project_js.jpg",
+    image: "/assets/personal-portfolio.jpg",
     title: "Personal Portfolio",
     subtitle: "Showcase of My Work",
     techStack: [

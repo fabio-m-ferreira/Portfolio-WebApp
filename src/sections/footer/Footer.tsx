@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import styles from "./footer.module.css";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
@@ -11,21 +10,6 @@ const Footer = () => {
       <a href="#home" className={styles.footerLogo}>
         Fábio Ferreira
       </a>
-
-      <ul className={styles.permalinks}>
-        <li>
-          <Link href="/#home">Home</Link>
-        </li>
-        <li>
-          <Link href="/#about">About</Link>
-        </li>
-        <li>
-          <Link href="/#career">Career</Link>
-        </li>
-        <li>
-          <Link href="/#projects">Projects</Link>
-        </li>
-      </ul>
 
       <div className={styles.socials}>
         <a
