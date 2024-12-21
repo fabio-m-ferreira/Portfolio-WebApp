@@ -42,7 +42,7 @@ const Footer = () => {
       <div className={styles.copyright}>
         <a href="https://www.freepik.com/aleksandr-samochernyi" target="_blank">
           {" "}
-          Projects Section Websites mockups designed by aleksandr_samochernyi -
+          Mockups for some projects were designed by aleksandr_samochernyi -
           Freepik
         </a>
         <p>© 2024 | All rights reserved | Fábio Ferreira</p>
