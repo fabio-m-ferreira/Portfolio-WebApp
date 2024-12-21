@@ -160,7 +160,6 @@ const projectsData: dataProps[] = [
         className={styles.btn}
         text="See More"
         href="/facepalm"
-        target="_blank"
         variant="tertiary"
       />
     ),

@@ -36,7 +36,7 @@
 
 .projectItem:nth-child(odd) {
   flex-direction: row-reverse;
-  background-color: #23233c;
+  background-color: var(--color-bg-variant);
 }
 
 .projectItem:last-child {

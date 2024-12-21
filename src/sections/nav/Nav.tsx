@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./nav.module.css";
 import Link from "next/link";
-import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
-import { BiBook } from "react-icons/bi";
 import Scrollspy from "@/utils/ScrollSpy";
 
 const Nav = () => {
@@ -22,17 +20,19 @@ const Nav = () => {
   }, []);
 
   const navLinks = [
-    { href: "/#home", icon: <AiOutlineHome />, id: "home", name: "Home" },
-    { href: "/#about", icon: <AiOutlineUser />, id: "about", name: "About" },
+    {
+      href: "/#home",
+      id: "home",
+      name: "Home",
+    },
+    { href: "/#about", id: "about", name: "About" },
     {
       href: "/#career",
-      icon: <BiBook />,
       id: "career",
       name: "Career",
     },
     {
       href: "/#projects",
-      icon: <BiBook />,
       id: "projects",
       name: "Projects",
     },
@@ -53,12 +53,7 @@ const Nav = () => {
         offset={-100}
       >
         {navLinks.map(({ href, id, name }) => (
-          <Link
-            key={id}
-            href={href}
-            aria-label={name}
-            className={styles.navItem}
-          >
+          <Link key={id} href={href} aria-label={id} className={styles.navItem}>
             {name}
           </Link>
         ))}

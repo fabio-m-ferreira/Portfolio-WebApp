@@ -4,9 +4,10 @@ import styles from "./facepalm.module.css";
 import FacepalmLogo from "@static/assets/facepalm_logo.png";
 import Image from "next/image";
 import { FaReact } from "react-icons/fa";
-import { SiFirebase } from "react-icons/si";
+import { IoLogoFirebase } from "react-icons/io5";
 import facepalmPageData from "@data/facepalmPageData";
 import Button from "@/components/button/Button";
+import { FaCss3Alt } from "react-icons/fa6";
 
 const FacepalmApp = () => {
   return (
@@ -31,10 +32,15 @@ const FacepalmApp = () => {
             data-aos="fade-up"
             data-aos-delay="300"
           />
-          <SiFirebase
+          <FaCss3Alt
             className={styles.projectIcon}
             data-aos="fade-up"
             data-aos-delay="350"
+          />
+          <IoLogoFirebase
+            className={styles.projectIcon}
+            data-aos="fade-up"
+            data-aos-delay="400"
           />
         </div>
         <h3 data-aos="fade-up" data-aos-delay="400">
