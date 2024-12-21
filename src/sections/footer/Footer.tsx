@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./footer.module.css";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
+import { FaEnvelope } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -19,7 +20,10 @@ const Footer = () => {
           <Link href="/#about">About</Link>
         </li>
         <li>
-          <Link href="/#portfolio">Career</Link>
+          <Link href="/#career">Career</Link>
+        </li>
+        <li>
+          <Link href="/#projects">Projects</Link>
         </li>
       </ul>
 
@@ -40,12 +44,21 @@ const Footer = () => {
         >
           <BsGithub />
         </a>
+
+        <a
+          href="mailto:fabio.f.dev@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="github"
+        >
+          <FaEnvelope />
+        </a>
       </div>
 
       <div className={styles.copyright}>
         <a href="https://www.freepik.com/aleksandr-samochernyi" target="_blank">
           {" "}
-          Portfolio Section Websites mockups designed by aleksandr_samochernyi -
+          Projects Section Websites mockups designed by aleksandr_samochernyi -
           Freepik
         </a>
         <p>© 2024 | All rights reserved | Fábio Ferreira</p>
