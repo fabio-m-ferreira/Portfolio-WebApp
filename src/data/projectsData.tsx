@@ -28,7 +28,7 @@ const projectsData: dataProps[] = [
     id: 1,
     image: "/assets/rm_website.jpg",
     title: "Resultado de Mestre",
-    subtitle: "Professional Project",
+    subtitle: "Designed and developed",
     techStack: [
       <>
         <FaWordpress /> Wordpress
@@ -56,7 +56,7 @@ const projectsData: dataProps[] = [
       <Button
         className={styles.btn}
         text="Live Demo"
-        href="https://ff-react-portfolio-template.vercel.app/"
+        href="https://resultadodemestre.pt/"
         target="_blank"
         variant="tertiary"
       />
@@ -66,7 +66,7 @@ const projectsData: dataProps[] = [
     id: 2,
     image: "/assets/personal-portfolio.jpg",
     title: "Personal Portfolio",
-    subtitle: "Showcase of My Work",
+    subtitle: "Designed and developed",
     techStack: [
       <>
         <SiNextdotjs /> NextJS
@@ -85,7 +85,7 @@ const projectsData: dataProps[] = [
       <Button
         className={styles.btn}
         text="GitHub"
-        href="https://github.com/fabio-m-ferreira/travel-agency"
+        href="https://github.com/fabio-m-ferreira/Portfolio-WebApp"
         target="_blank"
         variant="primary"
       />
@@ -95,7 +95,6 @@ const projectsData: dataProps[] = [
         className={styles.btn}
         text="Live Demo"
         href="#"
-        target="_blank"
         variant="tertiary"
       />
     ),
@@ -104,7 +103,7 @@ const projectsData: dataProps[] = [
     id: 3,
     image: "/assets/gestix-portfolio.jpg",
     title: "Gestix Software",
-    subtitle: "Professional Project",
+    subtitle: "Designed and developed in 2021 | Website may have changed",
     techStack: [
       <>
         <FaHtml5 /> HTML
@@ -123,7 +122,7 @@ const projectsData: dataProps[] = [
       <Button
         className={styles.btn}
         text="Live Demo"
-        href="https://www.gestixsoftware.com/"
+        href="https://www.gestix.com/"
         target="_blank"
         variant="tertiary"
       />
@@ -133,7 +132,7 @@ const projectsData: dataProps[] = [
     id: 4,
     image: "/assets/facepalm-portfolio.jpg",
     title: "Facepalm",
-    subtitle: "Social Media App - Academic Project",
+    subtitle: "Designed and developed",
     techStack: [
       <>
         <FaReact /> React Native
