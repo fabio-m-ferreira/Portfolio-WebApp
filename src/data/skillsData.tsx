@@ -56,9 +56,9 @@ const skillsData: dataProps[] = [
     subTitle: "NodeJS framework",
   },
   {
-    icon: "/assets/tech/firebase.svg",
-    title: "Firebase",
-    subTitle: "Cloud platform",
+    icon: "/assets/tech/jira.svg",
+    title: "Jira",
+    subTitle: "Project management",
   },
   {
     icon: "/assets/tech/codeium.svg",

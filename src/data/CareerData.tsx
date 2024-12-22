@@ -26,6 +26,8 @@ import {
   SiKeycloak,
   SiStorybook,
   SiMui,
+  SiJira,
+  SiSonarqube,
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 
@@ -45,7 +47,6 @@ export const CareerWorkData: TimelineItemProps[] = [
     techList: [
       { name: "Typescript", icon: <SiTypescript /> },
       { name: "React", icon: <FaReact /> },
-      { name: "Git", icon: <FaGitAlt /> },
       { name: "Gitlab", icon: <SiGitlab /> },
       { name: "CSS", icon: <FaCss3Alt /> },
       { name: "Figma", icon: <SiFigma /> },
@@ -57,6 +58,8 @@ export const CareerWorkData: TimelineItemProps[] = [
       { name: "Keycloak", icon: <SiKeycloak /> },
       { name: "Storybook", icon: <SiStorybook /> },
       { name: "Material UI", icon: <SiMui /> },
+      { name: "Jira", icon: <SiJira /> },
+      { name: "SonarQube", icon: <SiSonarqube /> },
     ],
   },
   {
