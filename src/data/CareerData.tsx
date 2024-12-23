@@ -39,7 +39,7 @@ export const CareerWorkData: TimelineItemProps[] = [
     date: "Aug 2022 - Present",
     bulletList: [
       "Lead developer for the company's component library, ensuring consistency and scalability across all projects.",
-      "Lead developer for a cloud management project that centralizes the company's services, integrating features like user management and service management.",
+      "Leading the development of a cloud management platform to centralize the company’s services, with features such as user and service management.",
       "Contributed significantly to redesigning and restructuring projects to align with the new design guidelines and component library, enabling better adoption across all platforms.",
       "Contributed to diverse initiatives, including developing a Windows application with Electron and building the company's documentation wiki for internal and public knowledge sharing.",
       "In a cybersecurity-focused organization, built solutions where security wasn't just an afterthought, but a fundamental part of how we create and design technology.",
