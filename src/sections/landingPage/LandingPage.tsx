@@ -58,7 +58,7 @@ const LandingPage = () => {
               aria-label="Email"
               data-aos="fade-up"
               data-aos-delay="2400"
-              href="mailto:fabio.f.dev@gmail.com"
+              href="mailto:me@fabiof.dev"
               rel="noreferrer"
             >
               <FaEnvelope />

@@ -45,7 +45,7 @@ const About = () => {
               <Button
                 text="Let's Talk"
                 variant="tertiary"
-                href="mailto:fabio.f.dev@gmail.com"
+                href="mailto:me@fabiof.dev"
               />
             </div>
           </div>

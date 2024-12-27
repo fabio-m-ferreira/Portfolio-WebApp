@@ -30,7 +30,7 @@ const Footer = () => {
         </a>
 
         <a
-          href="mailto:fabio.f.dev@gmail.com"
+          href="mailto:me@fabiof.dev"
           target="_blank"
           rel="noreferrer"
           aria-label="github"
