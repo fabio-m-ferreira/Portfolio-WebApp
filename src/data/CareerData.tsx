@@ -38,9 +38,9 @@ export const CareerWorkData: TimelineItemProps[] = [
     location: "Lisbon, Portugal | Hybrid",
     date: "Aug 2022 - Present",
     bulletList: [
-      "Lead developer for the company's component library, ensuring consistency and scalability across all projects.",
+      "Lead developer for the company’s component library, reducing development time by 50% through reusable, secure and responsive components.",
       "Leading the development of a cloud management platform to centralize the company’s services, with features such as user and service management.",
-      "Contributed significantly to redesigning and restructuring projects to align with the new design guidelines and component library, enabling better adoption across all platforms.",
+      "Contributed significantly to redesigning and restructuring legacy projects to align with the new design guidelines and component library, ensuring 100% design consistency across projects.",
       "Contributed to diverse initiatives, including developing a Windows application with Electron and building the company's documentation wiki for internal and public knowledge sharing.",
       "In a cybersecurity-focused organization, built solutions where security wasn't just an afterthought, but a fundamental part of how we create and design technology.",
     ],
@@ -67,9 +67,9 @@ export const CareerWorkData: TimelineItemProps[] = [
     location: "Remote",
     date: "Dez 2021 - Present",
     bulletList: [
-      "Redesigned existing websites to improve usability, aesthetics, and performance, creating a stronger online presence for clients.",
+      "Designed and developed websites focusing on responsive design and performance optimization creating a stronger online presence for clients.",
+      "Produced diverse creative solutions, including graphic design and multimedia projects, delivering 100% client satisfaction through cohesive and polished results.",
       "Created unique, professional logos that reflected clients' branding and identity.",
-      "Delivered various creative solutions, including graphic design and multimedia projects, ensuring a cohesive and polished result for every task.",
     ],
     techList: [
       { name: "Typescript", icon: <SiTypescript /> },
@@ -93,10 +93,9 @@ export const CareerWorkData: TimelineItemProps[] = [
     location: "Santarém, Portugal | Hybrid",
     date: "Jan 2021 - Nov 2021",
     bulletList: [
-      "Rebuilt and redesigned the main company website with a focus on performance, scalability and user experience.",
-      "Created a UI/UX-friendly editable website template for clients to customize their own website.",
+      "Rebuilt and redesigned the company’s main website, improving performance and user experience by 20%.",
+      "Developed a customizable, UI/UX-friendly website template for clients, Increasing customer satisfaction by 35%.",
       "Redesigned a more UI/UX-friendly Backoffice.",
-      "All of these practically and aesthetically changes massively increased customer satisfaction.",
       "Created a mobile version for POS devices so that our services could be used in physical stores (Kotlin).",
       "Helped developing an electronic signature feature to our services (PHP, C++).",
     ],
