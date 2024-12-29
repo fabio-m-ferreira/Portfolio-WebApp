@@ -30,12 +30,14 @@ const TimelineItem = ({
   return (
     <div className={styles.timelineItem}>
       <div className={styles.timelineHeader}>
-        <div className={styles.date}>{date}</div>
+        <div data-aos="fade-up" className={styles.date}>
+          {date}
+        </div>
         <div className={styles.timeline}></div>
       </div>
 
       <div className={styles.timelineContent}>
-        <div className={styles.header}>
+        <div data-aos="fade-up" className={styles.header}>
           <div className={styles.title}>
             <h4>{title}</h4>
             <p>{subtitle}</p>
@@ -48,6 +50,7 @@ const TimelineItem = ({
         </div>
 
         <div
+          data-aos="fade-up"
           className={[styles.content, expandOpen && styles.expanded].join(" ")}
         >
           {children}
