@@ -49,40 +49,43 @@ const TimelineItem = ({
           </div>
         </div>
 
-        <div
-          data-aos="fade-up"
-          className={[styles.content, expandOpen && styles.expanded].join(" ")}
-        >
-          {children}
+        <div data-aos="fade-up">
+          <div
+            className={[styles.content, expandOpen && styles.expanded].join(
+              " "
+            )}
+          >
+            {children}
 
-          {bulletList && (
-            <ul className={styles.bulletList}>
-              {bulletList.map((bullet, index) => (
-                <li key={index} className={styles.bulletPoint}>
-                  {bullet}
-                </li>
-              ))}
-            </ul>
-          )}
+            {bulletList && (
+              <ul className={styles.bulletList}>
+                {bulletList.map((bullet, index) => (
+                  <li key={index} className={styles.bulletPoint}>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            )}
 
-          <Button
-            onClick={() => setExpandOpen(!expandOpen)}
-            size="small"
-            expandIcon
-            expandOpen={expandOpen}
-            variant="secondary"
-            text={expandOpen ? "Show less" : "Show more"}
-          />
-          {techList && (
-            <div className={styles.techList}>
-              {techList.map((tech, index) => (
-                <div key={index} className={styles.tech}>
-                  {tech.icon}
-                  <p>{tech.name}</p>
-                </div>
-              ))}
-            </div>
-          )}
+            <Button
+              onClick={() => setExpandOpen(!expandOpen)}
+              size="small"
+              expandIcon
+              expandOpen={expandOpen}
+              variant="secondary"
+              text={expandOpen ? "Show less" : "Show more"}
+            />
+            {techList && (
+              <div className={styles.techList}>
+                {techList.map((tech, index) => (
+                  <div key={index} className={styles.tech}>
+                    {tech.icon}
+                    <p>{tech.name}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
