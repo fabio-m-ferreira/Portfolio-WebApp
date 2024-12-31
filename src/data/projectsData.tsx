@@ -11,7 +11,7 @@ import {
   FaWordpress,
 } from "react-icons/fa6";
 import { IoLogoFirebase } from "react-icons/io5";
-import { SiNextdotjs } from "react-icons/si";
+import { SiNextdotjs, SiTypescript } from "react-icons/si";
 
 interface dataProps {
   id: number;
@@ -69,13 +69,13 @@ const projectsData: dataProps[] = [
     subtitle: "Designed and developed",
     techStack: [
       <>
+        <SiTypescript /> Typescript
+      </>,
+      <>
         <SiNextdotjs /> NextJS
       </>,
       <>
         <FaCss3Alt /> CSS
-      </>,
-      <>
-        <FaJs /> Javascript
       </>,
       <>
         <FaFigma /> Figma
