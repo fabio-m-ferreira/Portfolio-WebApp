@@ -42,7 +42,7 @@
   border: 1px solid #777c81;
   background-color: unset;
   color: #777c81;
-  cursor: default;
+  cursor: no-drop;
 }
 
 .disabled:hover {
