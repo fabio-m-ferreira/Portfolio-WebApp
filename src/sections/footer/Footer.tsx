@@ -45,7 +45,7 @@ const Footer = () => {
           Mockups for some projects were designed by aleksandr_samochernyi -
           Freepik
         </a>
-        <p>© 2024 | All rights reserved | Fábio Ferreira</p>
+        <p>© 2025 | All rights reserved | Fábio Ferreira</p>
       </div>
     </footer>
   );
