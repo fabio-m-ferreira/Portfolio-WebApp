@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./landingPage.module.css";
 import { FaEnvelope, FaLocationDot } from "react-icons/fa6";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsMedium } from "react-icons/bs";
 import Link from "next/link";
 import Button from "@/components/button/Button";
 import Logo from "./Logo";
@@ -53,7 +53,16 @@ const LandingPage = () => {
             >
               <BsGithub />
             </Link>
-
+             <Link
+              href="https://medium.com/@fabio.f.dev"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Medium"
+              data-aos="fade-up"
+              data-aos-delay="2350"
+            >
+              <BsMedium />
+            </Link>
             <a
               aria-label="Email"
               data-aos="fade-up"
