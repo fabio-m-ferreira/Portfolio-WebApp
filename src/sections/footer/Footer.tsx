@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./footer.module.css";
 import { BsGithub, BsLinkedin, BsMedium } from "react-icons/bs";
 import { FaEnvelope } from "react-icons/fa6";
-import Link from "next/link";
 
 const Footer = () => {
   return (
