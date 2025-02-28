@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./footer.module.css";
-import { BsGithub } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsMedium } from "react-icons/bs";
 import { FaEnvelope } from "react-icons/fa6";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -28,7 +28,14 @@ const Footer = () => {
         >
           <BsGithub />
         </a>
-
+        <a
+          href="https://medium.com/@fabio.f.dev"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Medium"
+        >
+          <BsMedium />
+        </a>
         <a
           href="mailto:me@fabiof.dev"
           target="_blank"
