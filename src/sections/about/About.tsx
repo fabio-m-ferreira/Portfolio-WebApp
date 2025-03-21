@@ -35,10 +35,12 @@ const About = () => {
             data-aos-delay="100"
           >
             <p>
-              I&apos;m a <span>Fullstack Developer</span> with a focus on
-              Frontend. Guided by a foundation in <span>design</span> and a
-              career in <span>cybersecurity</span>, I create web solutions that
-              prioritize both aesthetics and resilience.
+              I&apos;m a <span>Frontend Developer</span> with over 4 years of
+              professional experience and 6+ years of coding expertise, skilled
+              in both <span>UX/UI design</span> and{" "}
+              <span>Fullstack development</span>. With a foundation in design
+              and a career in cybersecurity, I deliver web solutions that
+              combine aesthetics, functionality, and resilience.
             </p>
             <div className={styles.buttonGroup}>
               <Button text="Explore my Journey" href="/#career" />
