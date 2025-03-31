@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./nav.module.css";
 import Link from "next/link";
-import Scrollspy from "@/utils/ScrollSpy";
+import Scrollspy from "scrollspy-react";
 
 const Nav = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
